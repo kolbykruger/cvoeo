@@ -8,7 +8,7 @@
         <meta name="description" content="" />
         <meta name="robots" content="noindex, nofollow" />
 
-        <title>Design | *Site Name*</title>
+        <title>Design | CVOEO</title>
 
         <!-- Font Scripts -->
         <script defer type="text/javascript" src="js/fonts.js"></script>
@@ -40,83 +40,391 @@
                 <div class="group">
                     <div class="logo">
                         <a href="index.html" class="force">
-                            <img src="https://eternityatom.com/images/atom_logo.svg" title="Return Home" alt="Logo" />
+                            <img src="images/cvoeo-logo.svg" title="Return Home" alt="Logo" />
                         </a>
                     </div>
 
                     <nav class="nav" role="navigation" aria-label="Site Menu">
-                        <ul>
-                            <li><a href="#">Link</a></li>
-                            <li class="trigger">
-                                <a href="#">Link <i class="fal fa-caret-down" aria-hidden="true"></i></a>
-                                <ul class="drop">
-                                    <li><a href="#">Link</a></li>
-                                    <li><a href="#">Link</a></li>
-                                    <li><a href="#">Link</a></li>
-                                </ul>
+                        <ul class="utility-nav">
+                            <li>
+                                <select onchange="doGTranslate(this);">
+                                    <option value="">Select a Language...</option>
+                                    <option value="en|en">English</option>
+                                    <option value="en|es">Spanish</option>
+                                    <option value="en|fr">French</option>
+                                    <option value="en|de">German</option>
+                                    <option value="en|it">Italian</option>
+                                    <option value="en|sv">Swedish</option>
+                                    <option value="en|fi">Finnish</option>
+                                    <option value="en|da">Danish</option>
+                                    <option value="en|nl">Dutch</option>
+                                    <option value="en|ja">Japanese</option>
+                                    <option value="en|pt">Portuguese</option>
+                                    <option value="en|ru">Russian</option>
+                                    <option value="en|ar">Arabic</option>
+                                    <option value="en|iw">Hebrew</option>
+                                    <option value="en|hi">Hindi</option>
+                                </select>
                             </li>
-                            <li><a href="#">Link</a></li>
-                            <li class="trigger">
-                                <a href="#">Link <i class="fal fa-caret-down" aria-hidden="true"></i></a>
-                                <ul class="drop">
-                                    <li><a href="#">Drop Link</a></li>
-                                    <li><a href="#">Drop Link</a></li>
-                                    <li><a href="#">Drop Link</a></li>
-                                </ul>
+                            <li>
+                                <a href="#">Find Us</a>
+                            </li>
+                            <li>
+                                <a href="#">Latest</a>
+                            </li>
+                            <li>
+                                <a href="#">Newsletter</a>
+                            </li>
+                            <li>
+                                <a href="#">Donate</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="far fa-search"></i></a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <button data-pair="1">
+                                    Get Help <i class="far fa-angle-down" aria-hidden="true"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button data-pair="2">
+                                    Learn <i class="far fa-angle-down" aria-hidden="true"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button data-pair="3">
+                                    Get Involved <i class="far fa-angle-down" aria-hidden="true"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button data-pair="4">
+                                    About Us <i class="far fa-angle-down" aria-hidden="true"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button data-pair="5">
+                                    Careers <i class="far fa-angle-down" aria-hidden="true"></i>
+                                </button>
                             </li>
                         </ul>
                     </nav>
+
+                    <span class="menu-overlay"></span>
+                    <div class="menus">
+                        <div class="menu" aria-hidden="true" aria-expanded="false" tabindex="-1" data-pair="1">
+                            <div class="container">
+                                <div class="menu-head">
+                                    <h2>Get Help</h2>
+                                </div>
+                                <div class="group" data-count="3">
+                                    <div class="menu-section">
+                                        <h3 class="menu-heading"><a href="#">Housing</a></h3>
+                                        <ul class="menu-nav">
+                                            <li><a href="#">Financial Help</a></li>
+                                            <li><a href="#">Tenants Rights & Resources</a></li>
+                                            <li><a href="#">Mobile Home Support</a></li>
+                                            <li><a href="#">Fair Housing & Discrimination</a></li>
+                                            <li><a href="#">Weatherization</a></li>
+                                            <li><a href="#">Homelessness</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-section">
+                                        <h3 class="menu-heading"><a href="#">Food</a></h3>
+                                        <ul class="menu-nav">
+                                            <li><a href="#">TBD</a></li>
+                                            <li><a href="#">Food Shelves</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-section">
+                                        <h3 class="menu-heading"><a href="#">Heat & Utilities</a></h3>
+                                        <ul class="menu-nav">
+                                            <li><a href="#">Fuel Assistance</a></li>
+                                            <li><a href="#">Utilities</a></li>
+                                            <li><a href="#">Furnace Repair</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-section">
+                                        <h3 class="menu-heading"><a href="#">Children & Families</a></h3>
+                                        <ul class="menu-nav">
+                                            <li><a href="#">Head Start</a></li>
+                                            <li><a href="#">CIS</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-section">
+                                        <h3 class="menu-heading"><a href="#">Finances</a></h3>
+                                        <ul class="menu-nav">
+                                            <li><a href="#">Personal Resources & Coaching</a></li>
+                                            <li><a href="#">Micro-business Resources & Coaching</a></li>
+                                            <li><a href="#">New American Resources & Coaching</a></li>
+                                            <li><a href="#">Savings Program</a></li>
+                                            <li><a href="#">Tax Preparation Assistance</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-section">
+                                        <h3 class="menu-heading"><a href="#">Domestic Violence</a></h3>
+                                        <ul class="menu-nav">
+                                            <li><a href="#">Shelters & Services</a></li>
+                                            <li><a href="#">Non-CVOEO Resources</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- <div class="menu-actions buttons-center">
+                                        <a href="#" class="button"
+                                            ><span>Explore more advice</span><i class="far fa-long-arrow-right"></i
+                                        ></a>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <button class="menu-closer" title="Close Menu">
+                                <i class="far fa-chevron-up"></i>
+                            </button>
+                        </div>
+                        <div class="menu" aria-hidden="true" aria-expanded="false" tabindex="-1" data-pair="2">
+                            <div class="container">
+                                <div class="menu-head">
+                                    <h2>Learn</h2>
+                                    <!-- <a href="#" class="button button-size-small button-two"
+                                        ><span>Find a Course</span><i class="far fa-arrow-right"></i
+                                    ></a> -->
+                                </div>
+                                <div class="group" data-count="3">
+                                    <div class="menu-section">
+                                        <h3 class="menu-heading">
+                                            <a href="#">Calendar</a>
+                                        </h3>
+                                        <ul class="menu-nav">
+                                            <li><a href="#">Event #1</a></li>
+                                            <li><a href="#">Event #2</a></li>
+                                            <li><a href="#">Event #3</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-section">
+                                        <h3 class="menu-heading"><a href="#">Personal Finance Classes</a></h3>
+                                        <ul class="menu-nav">
+                                            <li><a href="#">Class #1</a></li>
+                                            <li><a href="#">Class #2</a></li>
+                                            <li><a href="#">Class #3</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-section">
+                                        <h3 class="menu-heading"><a href="#">Micro Business Workshops</a></h3>
+                                        <ul class="menu-nav">
+                                            <li><a href="#">Workshop #1</a></li>
+                                            <li><a href="#">Workshop #2</a></li>
+                                            <li><a href="#">Workshop #3</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-section">
+                                        <h3 class="menu-heading"><a href="#">Renters Workshops</a></h3>
+                                        <ul class="menu-nav">
+                                            <li><a href="#">Workshop #1</a></li>
+                                            <li><a href="#">Workshop #2</a></li>
+                                            <li><a href="#">Workshop #3</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-section">
+                                        <h3 class="menu-heading"><a href="#">Fair Housing</a></h3>
+                                        <ul class="menu-nav">
+                                            <li><a href="#">Rights & Responsibilities</a></li>
+                                            <!-- <li><a href="#">Speakers #2</a></li>
+                                            <li><a href="#">Speakers #3</a></li> -->
+                                        </ul>
+                                    </div>
+                                    <div class="menu-section">
+                                        <h3 class="menu-heading"><a href="#">Publications</a></h3>
+                                        <ul class="menu-nav">
+                                            <li><a href="#">Pub #1</a></li>
+                                            <li><a href="#">Pub #2</a></li>
+                                            <li><a href="#">Pub #3</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- <div class="menu-actions buttons-center">
+                                        <a href="#" class="button"
+                                            ><span>Browse all programs & training's</span
+                                            ><i class="far fa-long-arrow-right"></i
+                                        ></a>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <button class="menu-closer" title="Close Menu">
+                                <i class="far fa-chevron-up"></i>
+                            </button>
+                        </div>
+                        <div class="menu" aria-hidden="true" aria-expanded="false" tabindex="-1" data-pair="3">
+                            <div class="container">
+                                <div class="menu-head">
+                                    <h2>Get Involved</h2>
+                                    <!-- <a href="#" class="button button-size-small button-two"
+                                        ><span>Donate</span><i class="far fa-arrow-right"></i
+                                    ></a> -->
+                                </div>
+                                <div class="group" data-count="2">
+                                    <div class="menu-section">
+                                        <h3 class="menu-heading"><a href="#">Ways to Give</a></h3>
+                                        <ul class="menu-nav">
+                                            <li><a href="#">Link</a></li>
+                                            <li><a href="#">Link</a></li>
+                                            <li><a href="#">Link</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-section">
+                                        <h3 class="menu-heading"><a href="#">Events</a></h3>
+                                        <ul class="menu-nav">
+                                            <li><a href="#">Event #1</a></li>
+                                            <li><a href="#">Event #2</a></li>
+                                            <li><a href="#">Event #3</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="menu-closer" title="Close Menu">
+                                <i class="far fa-chevron-up"></i>
+                            </button>
+                        </div>
+                        <div class="menu" aria-hidden="true" aria-expanded="false" tabindex="-1" data-pair="4">
+                            <div class="container">
+                                <div class="menu-head">
+                                    <h2>About Us</h2>
+                                </div>
+                                <div class="group" data-count="3">
+                                    <div class="menu-section">
+                                        <h3 class="menu-heading"><a href="#">CVOEO</a></h3>
+                                        <ul class="menu-nav">
+                                            <li><a href="#">Mission</a></li>
+                                            <li><a href="#">Impact</a></li>
+                                            <li><a href="#">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-section">
+                                        <h3 class="menu-heading"><a href="#">Who We Are</a></h3>
+                                        <ul class="menu-nav">
+                                            <li><a href="#">Admin / Leadership</a></li>
+                                            <li><a href="#">Programs</a></li>
+                                            <li><a href="#">Office of Racial Equality</a></li>
+                                            <li><a href="#">Board</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu-section">
+                                        <h3 class="menu-heading"><a href="#">Newsroom</a></h3>
+                                        <ul class="menu-nav">
+                                            <li><a href="#">Blog</a></li>
+                                            <li><a href="#">In the News</a></li>
+                                            <li><a href="#">What We're Following</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="menu-closer" title="Close Menu">
+                                <i class="far fa-chevron-up"></i>
+                            </button>
+                        </div>
+                        <div class="menu" aria-hidden="true" aria-expanded="false" tabindex="-1" data-pair="5">
+                            <div class="container">
+                                <div class="menu-head">
+                                    <h2>Careers</h2>
+                                </div>
+                                <div class="group" data-count="2">
+                                    <div class="menu-section">
+                                        <h3 class="menu-heading"><a href="#">Work that Matters</a></h3>
+                                        <ul class="menu-nav">
+                                            <li><a href="#">What We Offer</a></li>
+                                            <li><a href="#">Current Openings</a></li>
+                                            <li><a href="#">DEI</a></li>
+                                            <li><a href="#">How To Apply</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="menu-closer" title="Close Menu">
+                                <i class="far fa-chevron-up"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
 
         <main role="main">
-            <section class="carousel">
+            <section class="impression">
                 <div class="container">
                     <div class="group">
-                        <div class="slide">
-                            <figure class="aspect" style="--aspect-ratio: 1200 / 400">
-                                <picture>
-                                    <img src="https://via.placeholder.com/1200x400/4e4e4e/FFFFFF/?text=1" alt="" />
-                                </picture>
-                            </figure>
-                            <div class="info">
-                                <h1 class="title">Clouds</h1>
-                                <p class="desc">Subtext</p>
-                                <div class="buttons buttons-center">
-                                    <a class="button">Button</a>
-                                </div>
+                        <div class="text">
+                            <p class="eyebrow">Economic <strong>Opportunity</strong></p>
+                            <h1>
+                                Bridge
+                                <b
+                                    ><span>gaps</span
+                                    ><span class="p"
+                                        ><img src="images/paint-smear-2.svg" alt="Paint Smear Decoration" /></span
+                                ></b>
+                                <br />& build
+                                <b
+                                    ><span>futures</span
+                                    ><span class="p"
+                                        ><img src="images/paint-smear-1.svg" alt="Paint Smear Decoration" /></span
+                                ></b>
+                            </h1>
+                            <div class="description">
+                                <p>
+                                    We address fundamental issues of economic, social, and racial justice and work with
+                                    people to achieve economic independence.
+                                </p>
+                            </div>
+                            <div class="buttons">
+                                <a class="button" href="#"
+                                    ><span>More about us</span><i class="fal fa-arrow-right"></i
+                                ></a>
                             </div>
                         </div>
-
-                        <div class="slide">
-                            <figure class="aspect" style="--aspect-ratio: 1200 / 400">
-                                <picture>
-                                    <img src="https://via.placeholder.com/1200x400/4e4e4e/FFFFFF/?text=1" alt="" />
-                                </picture>
-                            </figure>
-                            <div class="info">
-                                <h1 class="title">Clouds</h1>
-                                <p class="desc">Subtext</p>
-                                <div class="buttons buttons-center">
-                                    <a class="button">Button</a>
-                                </div>
+                        <div class="images">
+                            <div class="image">
+                                <img src="images/diversity.jpg" alt="Diversity" />
+                            </div>
+                            <div class="image">
+                                <img src="images/diversity.jpg" alt="Diversity" />
+                            </div>
+                            <div class="image">
+                                <img src="images/diversity.jpg" alt="Diversity" />
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
 
-                        <div class="slide">
-                            <figure class="aspect" style="--aspect-ratio: 1200 / 400">
-                                <picture>
-                                    <img src="https://via.placeholder.com/1200x400/4e4e4e/FFFFFF/?text=1" alt="" />
-                                </picture>
-                            </figure>
-                            <div class="info">
-                                <h1 class="title">Clouds</h1>
-                                <p class="desc">Subtext</p>
-                                <div class="buttons buttons-center">
-                                    <a class="button">Button</a>
-                                </div>
+            <section class="statistics">
+                <div class="container">
+                    <div class="section-heading">
+                        <h2>Our Impact</h2>
+                    </div>
+                    <div class="group">
+                        <div class="statistics-item">
+                            <div class="icon">
+                                <i class="far fa-box"></i>
                             </div>
+                            <p class="value">100</p>
+                            <p class="label">Label</p>
+                        </div>
+                        <div class="statistics-item">
+                            <div class="icon">
+                                <i class="far fa-box"></i>
+                            </div>
+                            <p class="value">100</p>
+                            <p class="label">Label</p>
+                        </div>
+                        <div class="statistics-item">
+                            <div class="icon">
+                                <i class="far fa-box"></i>
+                            </div>
+                            <p class="value">100</p>
+                            <p class="label">Label</p>
+                        </div>
+                        <div class="statistics-item">
+                            <div class="icon">
+                                <i class="far fa-box"></i>
+                            </div>
+                            <p class="value">100</p>
+                            <p class="label">Label</p>
                         </div>
                     </div>
                 </div>
@@ -125,67 +433,22 @@
             <section class="features">
                 <div class="container">
                     <div class="group">
-                        <a href="#" class="item">
-                            <div class="image">
-                                <figure class="aspect" style="--aspect-ratio: 400 / 300">
-                                    <picture>
-                                        <img src="https://via.placeholder.com/400x300/4e4e4e/FFFFFF/?text=1" alt="" />
-                                    </picture>
-                                </figure>
-                            </div>
-                            <div class="bar">
-                                <h3 class="title">Feature #1</h3>
-                                <p class="description">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, neque!
-                                </p>
-                            </div>
-                        </a>
-
-                        <a href="#" class="item">
-                            <div class="image">
-                                <figure class="aspect" style="--aspect-ratio: 400 / 300">
-                                    <picture>
-                                        <img src="https://via.placeholder.com/400x300/4e4e4e/FFFFFF/?text=2" alt="" />
-                                    </picture>
-                                </figure>
-                            </div>
-                            <div class="bar">
-                                <h3 class="title">Feature #2</h3>
-                                <p class="description">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, neque!
-                                </p>
-                            </div>
-                        </a>
-
-                        <a href="#" class="item">
-                            <div class="image">
-                                <figure class="aspect" style="--aspect-ratio: 400 / 300">
-                                    <picture>
-                                        <img src="https://via.placeholder.com/400x300/4e4e4e/FFFFFF/?text=3" alt="" />
-                                    </picture>
-                                </figure>
-                            </div>
-                            <div class="bar">
-                                <h3 class="title">Feature #3</h3>
-                                <p class="description">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, neque!
-                                </p>
-                            </div>
-                        </a>
+                        <div class="features-item">a</div>
+                        <div class="features-item">b</div>
+                        <div class="features-item">c</div>
                     </div>
                 </div>
             </section>
 
-            <section class="introduction">
+            <section class="services">
                 <div class="container">
-                    <h1>Design</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate
-                        <a href="#">doloremque</a> beatae, fugiat, fuga possimus velit et dolorem. Esse reiciendis dolor
-                        corrupti. Optio non neque quas dolorum velit, sit vero esse ratione voluptate dignissimos eos
-                        nisi cumque cum hic ipsam consectetur eveniet reprehenderit. Enim perspiciatis, quasi ratione
-                        iste! Rerum, molestiae unde.
-                    </p>
+                    <div class="group">Services - Get Help, Learn, Get Involved</div>
+                </div>
+            </section>
+
+            <section class="donation donation-widget">
+                <div class="container">
+                    <div class="group">Donation Widget</div>
                 </div>
             </section>
 
@@ -245,14 +508,6 @@
                     </div>
                 </div>
             </section>
-
-            <section class="instagram">
-                <div class="container">
-                    <h2 class="heading">Instagram Feed</h2>
-                    <script src="https://apps.elfsight.com/p/platform.js" defer async></script>
-                    <div class="elfsight-app-2e580992-8c92-4eca-a1cb-5d82031ec9cb"></div>
-                </div>
-            </section>
         </main>
 
         <footer class="footer" role="contentinfo">
@@ -304,7 +559,7 @@
                 </div>
 
                 <div class="group footer-group footer-copyright">
-                    <div class="copyright" role="contentinfo">&copy; 2020 *Site Name*. All Rights Reserved.</div>
+                    <div class="copyright" role="contentinfo">&copy; 2020 CVOEO. All Rights Reserved.</div>
 
                     <div class="social-icons">
                         <a href="#" target="_blank" title="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>

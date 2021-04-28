@@ -1,24 +1,28 @@
 //Colors
-$color-0: #000;
-$color-1: #ef4538;
-$color-2: blue;
-$color-3: green;
+$color-0: #080f16;
+$color-1: #4b82ba;
+$color-2: #a1bc75;
+$color-3: #ba4b67;
+
+$color-base: #1c334a;
 
 $color-grey-1: #f1f2f3;
 $color-grey-2: #f8f8f8;
 $color-grey-3: #424242;
 
 //Fonts
-$font-0: "Open Sans", sans-serif;
-$font-1: "Open Sans", sans-serif;
+$font-0: 'Poppins', sans-serif;
+$font-1: 'Poppins', sans-serif;
 
 //Box Shadow
-$box-shadow-1: 0 2px 4px 0 rgba(50,50,93,.1);
-$box-shadow-2: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
-$box-shadow-3: 0 7px 14px rgba(50,50,93,.11), 0 3px 6px rgba(0,0,0,.08);
+$box-shadow-1: 0 2px 4px 0 rgba(50, 50, 93, 0.1);
+$box-shadow-2: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+$box-shadow-3: 0 7px 14px rgba(50, 50, 93, 0.11), 0 3px 6px rgba(0, 0, 0, 0.08);
 
 //Transitions
-$transition-1: 250ms ease;
+$transition-1: 0.3s cubic-bezier(0.53, 0.21, 0, 1);
+$transition-2: 0.6s cubic-bezier(0.53, 0.21, 0, 1);
+$transition-3: 0.9s cubic-bezier(0.53, 0.21, 0, 1);
 
 //Sizing
-$container-width: 1200px; //Sizing of the section .container as well as .column containers
+$container-width: 1300px; //Sizing of the section .container as well as .column containers

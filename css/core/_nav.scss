@@ -23,7 +23,7 @@
             overflow: hidden;
 
             a {
-                @include fs(13px);
+                @include fs(16px);
                 padding: 10px;
                 margin: 0;
 
@@ -51,12 +51,54 @@
         }
     }
 
+    button {
+        @include fs(20px);
+        display: block;
+        color: $color-0;
+        text-decoration: none;
+        transition: $transition-1;
+        -webkit-apearance: none;
+        -moz-appearance: none;
+        background: none;
+        border: none;
+        outline: none;
+        font-family: inherit;
+        border-bottom: 2px solid transparent;
+        padding: 0.25em 0;
+        cursor: pointer;
+
+        &.menu-open {
+            border-color: $color-1;
+            color: $color-1;
+
+            i:not(.fa-search) {
+                transform: rotateX(180deg);
+            }
+        }
+
+        i:not(.fa-search) {
+            @include fs(16px);
+            cursor: pointer;
+            margin-left: 0.25em;
+            opacity: 0.25;
+            transition: $transition-1;
+        }
+
+        &:hover,
+        &:focus {
+            color: $color-1;
+        }
+    }
+
+    li.open > button {
+        color: $color-1;
+    }
+
     li {
         position: relative;
         display: block;
 
         &.open {
-
             > a {
                 color: $color-1;
             }
@@ -70,7 +112,7 @@
     }
 
     a {
-        @include fs(16px);
+        @include fs(20px);
         display: block;
         color: $color-0;
         text-decoration: none;
@@ -85,6 +127,51 @@
             @include fs(12px);
             cursor: pointer;
             margin: 0 0 0 6px;
+        }
+    }
+
+    .utility-nav {
+        justify-content: flex-end;
+        margin-bottom: 1.5em;
+
+        li {
+            margin: 0 0 0 0.5em;
+
+            a {
+                opacity: 0.85;
+                @include fs(14px);
+                padding: 0.35em 0.75em;
+                border-radius: 0.25em;
+
+                &:hover,
+                &:focus {
+                    color: inherit;
+                    //background-color: rgba($color-6, 0.1);
+                }
+            }
+
+            i {
+                @include fs(14px);
+                margin: 0;
+                margin-right: 0.25em;
+            }
+        }
+
+        select {
+            border: none;
+            outline: none;
+            padding: 0.35em 0.75em;
+            font-family: inherit;
+            font-size: 14px;
+            border-radius: 0.5em;
+            opacity: 0.85;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+                background: #f6f9fc;
+                opacity: 1;
+            }
         }
     }
 

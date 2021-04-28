@@ -1,0 +1,304 @@
+$menu-background-color: #f6f9fc;
+
+body {
+    &.navigation-open {
+        overflow-y: hidden;
+    }
+}
+
+.menus {
+    position: fixed;
+    top: 10em;
+    left: 0;
+    right: 0;
+    bottom: 1em;
+    max-width: $container-width;
+    margin: 0 auto;
+    width: 100%;
+    transform: translate(0, -150%);
+    transition: opacity 0.25s cubic-bezier(0.53, 0.21, 0, 1), transform 0s;
+    z-index: 2;
+
+    transform-style: preserve-3d;
+    will-change: transform;
+    perspective: 1000px;
+
+    &.menu-closing {
+        transition: opacity 0.25s cubic-bezier(0.53, 0.21, 0, 1), transform 0.25s cubic-bezier(0.53, 0.21, 0, 1);
+        transform: translate(0, -100%);
+    }
+
+    body.navigation-open & {
+        transform: translate(0, 0);
+
+        .container {
+            animation: menu-open-container-opacity 0.3s cubic-bezier(0.53, 0.21, 0, 1) forwards 0.3s;
+        }
+    }
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    //background: $color-grey-3;
+    opacity: 0;
+    z-index: -1;
+    cursor: pointer;
+    transition: opacity 0.6s ease-in-out;
+
+    body.navigation-open & {
+        opacity: 0.15;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    padding-bottom: 4em;
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    overflow: auto;
+    background: #f6f9fc;
+    opacity: 0;
+    outline: none;
+    border-radius: 0.5em;
+    transform: translate3d(0px, 12px, -18px);
+    transition: transform 0.25s cubic-bezier(0.53, 0.21, 0, 1);
+
+    @media (max-height: 850px) {
+        padding-bottom: 10em;
+    }
+    @media (max-height: 700px) {
+        padding-bottom: 20em;
+    }
+
+    &.menu-open {
+        z-index: 2;
+        box-shadow: 0 0.625em 1.25em rgba(35, 45, 75, 0.25);
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+
+        .group > * {
+            opacity: 0;
+            animation: menu-group 0.4s cubic-bezier(0.53, 0.21, 0, 1) forwards;
+
+            @for $i from 0 to 10 {
+                &:nth-child(#{$i}) {
+                    animation-delay: 0.015s * $i;
+                }
+            }
+        }
+    }
+
+    .menu-closer {
+        appearance: none;
+        -webkit-apearance: none;
+        -moz-appearance: none;
+        position: absolute;
+        bottom: 1em;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        border: none;
+        background: none;
+        font-size: 1rem;
+        opacity: 0.65;
+        cursor: pointer;
+    }
+
+    .menu-head {
+        width: 100%;
+        padding: 2em;
+        padding-bottom: 1em;
+
+        h2,
+        a {
+            width: auto;
+            color: $color-base;
+            margin-bottom: 0;
+        }
+
+        a {
+            margin-left: 1em;
+        }
+    }
+
+    .container {
+        padding: 0;
+        opacity: 0;
+        max-width: $container-width;
+    }
+
+    .group {
+        align-items: stretch;
+        justify-content: flex-start;
+        padding: 0 1em;
+
+        .menu-section {
+            width: calc(25% - 2em);
+            padding: 2em;
+            margin: 1em;
+            background: #fff;
+            border-radius: 0.5em;
+            box-shadow: 0 0.625em 1.25em rgba(35, 45, 75, 0.025);
+
+            @media (max-width: 1150px) {
+                width: calc(33.333% - 2em);
+            }
+        }
+
+        &[data-count='1'] .menu-section {
+            width: calc(100% - 2em);
+        }
+        &[data-count='2'] .menu-section {
+            width: calc(50% - 2em);
+        }
+        &[data-count='3'] .menu-section {
+            width: calc(33.333% - 2em);
+        }
+    }
+
+    .buttons {
+        margin-top: 1em;
+
+        .button:hover,
+        .button:focus {
+            background: rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    input[type='text'] {
+        padding: 1em 2em;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: none;
+        font-size: 1.25rem;
+        font-family: inherit;
+        line-height: inherit;
+        width: 100%;
+        background: $color-grey-2;
+        border-radius: 5rem;
+        border: 2px solid #fff;
+        outline: none;
+
+        &:focus {
+            border-color: $color-3;
+            background: $color-grey-1;
+        }
+    }
+
+    h3 {
+        //text-transform: uppercase;
+        //letter-spacing: 0.025em;
+        font-size: 1.5rem;
+        margin-bottom: 0.5em;
+
+        a {
+            color: $color-1;
+            text-decoration: none;
+            transition: $transition-1;
+
+            &:hover,
+            &:focus {
+                color: $color-1;
+            }
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+        }
+
+        a:not(.button) {
+            position: relative;
+            font-size: 1rem;
+            overflow-wrap: break-word;
+            text-decoration: none;
+            color: $color-base;
+            transition: $transition-1;
+
+            &:hover,
+            &:focus {
+                color: $color-1;
+            }
+        }
+
+        a.button {
+            font-size: 1.25rem;
+        }
+    }
+
+    .menu-actions {
+        width: 100%;
+        padding: 0 1em;
+        margin-top: 1em;
+
+        & ~ .menu-section {
+            margin-top: 3em;
+        }
+    }
+
+    .menu-summary {
+        padding: 1em;
+        padding-top: 0;
+        margin-bottom: 1em;
+    }
+
+    @keyframes menu-open-transform {
+        from {
+            transform: translate(0, -100%);
+        }
+        to {
+            transform: translate(0, -0);
+        }
+    }
+
+    @keyframes menu-open-background {
+        from {
+            background: $menu-background-color;
+        }
+        to {
+            background: #fff;
+        }
+    }
+
+    @keyframes menu-close-transform {
+        from {
+            transform: translate(0, 0);
+        }
+        to {
+            transform: translate(0, -100%);
+        }
+    }
+
+    @keyframes menu-open-container-opacity {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @keyframes menu-group {
+        from {
+            opacity: 0;
+            transform: translate(0, -25%);
+        }
+        to {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+    }
+}

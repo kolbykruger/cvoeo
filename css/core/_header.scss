@@ -1,9 +1,11 @@
 .header {
+    border-top: 0.75em solid $color-base;
 
     .container {
         position: relative;
         max-width: $container-width;
         width: 100%;
+        padding: 2em 1em;
     }
 
     .group {
@@ -12,7 +14,7 @@
     }
 
     .logo {
-        width:100%;
+        width: 100%;
         max-width: 240px;
 
         a {
@@ -53,10 +55,27 @@
         }
     }
 
-    .search {
-        position: absolute;
-        right: 1em;
-        top: 1em;
+    .utility-navigation {
+        margin-bottom: 2em;
+
+        ul {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: flex-end;
+            list-style-type: none;
+            padding: 0;
+
+            li {
+                margin-left: 1.5em;
+                font-size: 0.875rem;
+            }
+
+            a {
+                text-decoration: none;
+                color: $color-base;
+            }
+        }
     }
 
     @media (max-width: 900px) {
@@ -79,5 +98,4 @@
             height: 100%;
         }
     }
-
 }

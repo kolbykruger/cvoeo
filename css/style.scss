@@ -11,6 +11,7 @@
 @import 'core/general';
 @import 'core/header';
 @import 'core/nav';
+@import 'core/menus';
 @import 'core/mobile_nav';
 @import 'core/ada';
 @import 'core/pageheading';
@@ -18,42 +19,43 @@
 @import 'core/layouts';
 
 //Components
-    //Generic
-    @import 'components/sidebar';
-    @import 'components/section_heading';
-    @import 'components/buttons';
-    @import 'components/social-icons';
-    @import 'components/instagram';
-    @import 'components/contact';
-    @import 'components/notification';
+//Generic
+@import 'components/sidebar';
+@import 'components/section_heading';
+@import 'components/buttons';
+@import 'components/social-icons';
+@import 'components/instagram';
+@import 'components/contact';
+@import 'components/notification';
 
-    //Utility
-    @import 'components/responsive-iframe';
-    @import 'components/select';
-    @import 'components/pdo-loader';
+//Utility
+@import 'components/responsive-iframe';
+@import 'components/select';
+@import 'components/pdo-loader';
 
-    //Search
-    @import 'components/autocomplete';
-    @import 'components/search';
-    @import 'components/search-results';
+//Search
+@import 'components/autocomplete';
+@import 'components/search';
+@import 'components/search-results';
 
-    //Blogs
-    @import 'components/blog';
-    @import 'components/blog_bar';
-    @import 'components/posts';
-    @import 'components/post-meta';
-    @import 'components/tags';
+//Blogs
+@import 'components/blog';
+@import 'components/blog_bar';
+@import 'components/posts';
+@import 'components/post-meta';
+@import 'components/tags';
 
-    //Content Blocks
-    @import 'components/alternating_rows';
-    @import 'components/accordion';
-    @import 'components/carousel';
-    @import 'components/features';
-    @import 'components/gallery';
-    @import 'components/introduction';
-    @import 'components/single_image';
-    @import 'components/slideshow';
-    @import 'components/table';
+//Content Blocks
+@import 'components/alternating_rows';
+@import 'components/accordion';
+@import 'components/carousel';
+@import 'components/features';
+@import 'components/gallery';
+@import 'components/introduction';
+@import 'components/single_image';
+@import 'components/slideshow';
+@import 'components/table';
+@import 'components/impression';
 
 //Unused
 //@import 'components/slick-arrows';

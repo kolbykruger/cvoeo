@@ -20,7 +20,6 @@ $button-background: $color-1;
     &-right {
         justify-content: flex-end;
     }
-
 }
 
 // Reset styles for all buttons
@@ -40,10 +39,12 @@ $button-background: $color-1;
     display: inline-flex;
     align-items: center;
     margin: 0;
-    padding: 0.75em 1em;
+    height: 52px;
+    padding: 0 1em;
     background: $button-background;
     color: $button-color;
-    border-radius: 0.25em;
+    border-radius: 0.5em;
+    font-weight: 500;
     line-height: 1;
     transition: 150ms ease;
     text-decoration: none;
@@ -94,14 +95,14 @@ $button-background: $color-1;
             background: transparent;
             box-shadow: none;
             color: $color-2;
-            border-color: $color-2
+            border-color: $color-2;
         }
     }
-    
+
     &[disabled] {
         background: $color-grey-1;
         color: $color-0;
-        cursor:default;
+        cursor: default;
 
         &:hover,
         &:focus {
@@ -111,7 +112,7 @@ $button-background: $color-1;
 
     @media (max-width: 768px) {
         &,
-        + &{
+        + & {
             margin: 0 1em 1em 0;
         }
     }
