@@ -36,6 +36,49 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 })
 
+//Statistics Counter
+document.addEventListener('DOMContentLoaded', function () {
+    const stats = document.querySelectorAll('.statistics-item')
+    if (stats) {
+        for (let i = 0; i < stats.length; i++) {
+            const elem = stats[i].querySelector('.value')
+
+            let v = elem.textContent.replace(',', '')
+            const s = +v * 0.8
+            const steps = getRange(+v, s, 30)
+
+            elem.textContent = steps[0]
+            elem.setAttribute('data-arr', steps)
+
+            let timer = 40
+            log(0)
+
+            function log(x) {
+                if (x < steps.length) {
+                    setTimeout(function () {
+                        elem.textContent = steps[x].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                        x++
+                        timer = timer * 1.05
+                        log(x)
+                    }, timer)
+                }
+            }
+        }
+    }
+
+    function getRange(upper, lower, steps) {
+        const difference = upper - lower
+        const increment = difference / (steps - 1)
+        return [
+            +lower.toFixed(0),
+            ...Array(steps - 2)
+                .fill('')
+                .map((_, index) => +(lower + increment * (index + 1)).toFixed(0)),
+            upper,
+        ]
+    }
+})
+
 //Flickity Carousel
 $('.carousel .group').flickity({
     cellSelector: '.slide',

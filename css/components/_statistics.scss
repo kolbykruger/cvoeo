@@ -1,0 +1,27 @@
+.statistics {
+    .container {
+    }
+
+    .section-heading {
+        text-align: center;
+    }
+
+    .group {
+        justify-content: center;
+    }
+
+    &-item {
+        width: calc(25% - 4em);
+        margin: 2em;
+        text-align: center;
+    }
+
+    .icon {
+        font-size: 3rem;
+    }
+
+    .value {
+        @extend h2;
+        margin: 0.5em 0;
+    }
+}
