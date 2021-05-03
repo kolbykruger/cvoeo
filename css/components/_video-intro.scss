@@ -1,0 +1,55 @@
+.video-intro {
+    background: $color-grey-1;
+    margin-bottom: 0;
+    //background: linear-gradient(to bottom, $color-grey-1, transparent);
+
+    .container {
+        padding: 10vh 10vh;
+        max-width: 100%;
+
+        @media (max-width: 968px) {
+            padding: 2em;
+        }
+    }
+
+    .group {
+        align-items: center;
+
+        @media (max-width: 968px) {
+            flex-flow: column nowrap;
+        }
+    }
+
+    .video {
+        flex: 1;
+
+        @media (max-width: 968px) {
+            width: 100%;
+        }
+    }
+
+    .details {
+        flex: 1;
+
+        @media (max-width: 968px) {
+            width: 100%;
+        }
+
+        .text {
+            padding: 5vw;
+
+            @media (max-width: 968px) {
+                padding: 5vh 0;
+            }
+
+            h2 {
+                @extend h1;
+                text-transform: initial;
+            }
+
+            .description {
+                max-width: 46em;
+            }
+        }
+    }
+}

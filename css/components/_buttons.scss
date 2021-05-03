@@ -99,6 +99,15 @@ $button-background: $color-1;
         }
     }
 
+    &-secondary {
+        background: $color-2;
+
+        &:hover,
+        &:focus {
+            background: darken($color-2, 5%);
+        }
+    }
+
     &[disabled] {
         background: $color-grey-1;
         color: $color-0;

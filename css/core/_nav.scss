@@ -41,7 +41,7 @@
         align-items: center;
 
         > li {
-            margin: 0 0 0 32px;
+            margin: 0 0 0 2.5em;
         }
 
         li:last-child ul {
@@ -81,6 +81,7 @@
             cursor: pointer;
             margin-left: 0.25em;
             opacity: 0.25;
+            display: none;
             transition: $transition-1;
         }
 
@@ -138,14 +139,25 @@
             margin: 0 0 0 0.5em;
 
             a {
+                display: inline-flex;
                 opacity: 0.85;
                 @include fs(14px);
                 padding: 0.35em 0.75em;
-                border-radius: 0.25em;
+                border-radius: 0.5em;
+
+                &.button {
+                    height: 32px;
+
+                    &:hover,
+                    &:focus {
+                        background: darken($color-2, 5%);
+                    }
+                }
 
                 &:hover,
                 &:focus {
                     color: inherit;
+                    background: #f6f9fc;
                     //background-color: rgba($color-6, 0.1);
                 }
             }
@@ -166,6 +178,14 @@
             border-radius: 0.5em;
             opacity: 0.85;
             cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            line-height: inherit;
+
+            &::-ms-expand {
+                display: none;
+            }
 
             &:hover,
             &:focus {

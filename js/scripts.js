@@ -45,12 +45,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
             let v = elem.textContent.replace(',', '')
             const s = +v * 0.8
-            const steps = getRange(+v, s, 30)
+            const steps = getRange(+v, s, 32)
 
             elem.textContent = steps[0]
             elem.setAttribute('data-arr', steps)
 
             let timer = 40
+            let index = 0.15 * i + 0.35
             log(0)
 
             function log(x) {
@@ -58,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     setTimeout(function () {
                         elem.textContent = steps[x].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
                         x++
-                        timer = timer * 1.05
+                        timer = timer * 1.04 + 0.07 * x + index
                         log(x)
                     }, timer)
                 }

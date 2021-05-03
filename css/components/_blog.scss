@@ -1,10 +1,25 @@
 .blog {
     margin: 0 auto;
 
+    .section-heading {
+        text-align: center;
+        margin-bottom: 2em;
+
+        h2 {
+            @extend h1;
+        }
+    }
+
+    &.blog-widget {
+        background: $color-grey-1;
+        padding: 5vh 0;
+
+        .group {
+        }
+    }
+
     &.blog-layout {
-
         .post {
-
             &:first-of-type {
                 width: 100%;
                 display: flex;
@@ -32,16 +47,13 @@
     }
 
     .container {
-
         & > .group {
             margin: 0 -1em;
         }
-
     }
 
     .group {
-        justify-content:center;
-
+        justify-content: center;
     }
 
     a {
@@ -52,14 +64,15 @@
     .post {
         width: calc(33.333% - 2em);
         margin: 1em;
-        border-radius: 0.25em;
         overflow: hidden;
         background: #fff;
+        border-radius: 0.5em;
+        box-shadow: 0 0.625em 1.25em rgba(35, 45, 75, 0.025);
         transition: $transition-1;
 
         &:hover,
-        &:focus{
-            box-shadow: $box-shadow-2;
+        &:focus {
+            box-shadow: 0 0.625em 1.25em rgba(35, 45, 75, 0.125);
         }
     }
 
@@ -71,7 +84,6 @@
             width: 100%;
             transition: $transition-1;
         }
-
     }
 
     .caption {
@@ -79,7 +91,7 @@
     }
 
     .info {
-        padding: 1em;
+        padding: 1em 2em 2em;
     }
 
     .title {
@@ -93,22 +105,18 @@
     }
 
     @media (max-width: 768px) {
-
         .post {
             width: calc(100% - 2em) !important;
         }
 
         &.blog-layout {
-
             .post:first-of-type {
                 display: block;
 
                 & > * {
                     width: 100%;
                 }
-
             }
         }
     }
-
 }

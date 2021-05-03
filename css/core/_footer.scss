@@ -1,10 +1,12 @@
 .footer {
     width: 100%;
-    background: $color-grey-2;
-    margin: 1em 0 0;
+    border-top: 1px solid $color-grey-2;
+
+    body#home & {
+        border-top: none;
+    }
 
     .container {
-
     }
 
     .group {
@@ -17,7 +19,7 @@
 
         img {
             width: 100%;
-            max-width: 100px;
+            max-width: 160px;
         }
     }
 
@@ -43,7 +45,6 @@
         padding: 0;
 
         li {
-
         }
 
         a {
@@ -70,7 +71,7 @@
 
     .ewd {
         width: 200px;
-        line-height:1;
+        line-height: 1;
 
         img {
             width: 100%;

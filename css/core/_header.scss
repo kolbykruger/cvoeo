@@ -55,29 +55,6 @@
         }
     }
 
-    .utility-navigation {
-        margin-bottom: 2em;
-
-        ul {
-            display: flex;
-            flex-flow: row wrap;
-            align-items: center;
-            justify-content: flex-end;
-            list-style-type: none;
-            padding: 0;
-
-            li {
-                margin-left: 1.5em;
-                font-size: 0.875rem;
-            }
-
-            a {
-                text-decoration: none;
-                color: $color-base;
-            }
-        }
-    }
-
     @media (max-width: 900px) {
         .group {
             align-items: center;

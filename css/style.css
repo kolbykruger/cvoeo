@@ -584,20 +584,20 @@ a {
   color: #4b82ba;
 }
 
-h1 {
+h1, .video-intro .details .text h2, .video-intro .details .text .statistics .value, .statistics .video-intro .details .text .value, .donation-widget .text h2, .donation-widget .text .statistics .value, .statistics .donation-widget .text .value, .statistics .section-heading h2, .statistics .section-heading .value, .blog .section-heading h2, .blog .section-heading .statistics .value {
   line-height: 1.2;
   font-weight: 600;
 }
-h1 {
+h1, .video-intro .details .text h2, .video-intro .details .text .statistics .value, .statistics .video-intro .details .text .value, .donation-widget .text h2, .donation-widget .text .statistics .value, .statistics .donation-widget .text .value, .statistics .section-heading h2, .statistics .section-heading .value, .blog .section-heading h2, .blog .section-heading .statistics .value {
   font-size: 2.5rem;
 }
 @media screen and (min-width: 38rem) {
-  h1 {
+  h1, .video-intro .details .text h2, .video-intro .details .text .statistics .value, .statistics .video-intro .details .text .value, .donation-widget .text h2, .donation-widget .text .statistics .value, .statistics .donation-widget .text .value, .statistics .section-heading h2, .statistics .section-heading .value, .blog .section-heading h2, .blog .section-heading .statistics .value {
     font-size: calc(2.5rem + 1 * ((100vw - 38rem) / 32));
   }
 }
 @media screen and (min-width: 70rem) {
-  h1 {
+  h1, .video-intro .details .text h2, .video-intro .details .text .statistics .value, .statistics .video-intro .details .text .value, .donation-widget .text h2, .donation-widget .text .statistics .value, .statistics .donation-widget .text .value, .statistics .section-heading h2, .statistics .section-heading .value, .blog .section-heading h2, .blog .section-heading .statistics .value {
     font-size: 3.5rem;
   }
 }
@@ -638,7 +638,7 @@ h3 {
   }
 }
 
-h1,
+h1, .video-intro .details .text h2, .video-intro .details .text .statistics .value, .statistics .video-intro .details .text .value, .donation-widget .text h2, .donation-widget .text .statistics .value, .statistics .donation-widget .text .value, .statistics .section-heading h2, .statistics .section-heading .value, .blog .section-heading h2, .blog .section-heading .statistics .value,
 h2,
 .statistics .value,
 h3 {
@@ -684,7 +684,7 @@ blockquote {
   max-width: 600px;
   margin: 3em auto;
   padding: 2rem;
-  background: #f8f8f8;
+  background: #f1f2f3;
   color: #1c354e;
   font-style: italic;
   text-align: center;
@@ -861,25 +861,6 @@ hr::before {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-.header .utility-navigation {
-  margin-bottom: 2em;
-}
-.header .utility-navigation ul {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: flex-end;
-  list-style-type: none;
-  padding: 0;
-}
-.header .utility-navigation ul li {
-  margin-left: 1.5em;
-  font-size: 0.875rem;
-}
-.header .utility-navigation ul a {
-  text-decoration: none;
-  color: #1c334a;
-}
 @media (max-width: 900px) {
   .header .group {
     align-items: center;
@@ -930,7 +911,7 @@ hr::before {
   margin: 0;
 }
 .nav ul ul a:hover, .nav ul ul a:focus {
-  background: #f8f8f8;
+  background: #f1f2f3;
 }
 .nav > ul {
   display: flex;
@@ -938,7 +919,7 @@ hr::before {
   align-items: center;
 }
 .nav > ul > li {
-  margin: 0 0 0 32px;
+  margin: 0 0 0 2.5em;
 }
 .nav > ul li:last-child ul {
   left: auto;
@@ -975,6 +956,7 @@ hr::before {
   cursor: pointer;
   margin-left: 0.25em;
   opacity: 0.25;
+  display: none;
   transition: 0.3s cubic-bezier(0.53, 0.21, 0, 1);
 }
 .nav button:hover, .nav button:focus {
@@ -1020,14 +1002,22 @@ hr::before {
   margin: 0 0 0 0.5em;
 }
 .nav .utility-nav li a {
+  display: inline-flex;
   opacity: 0.85;
   font-size: 14px;
   font-size: 0.875rem;
   padding: 0.35em 0.75em;
-  border-radius: 0.25em;
+  border-radius: 0.5em;
+}
+.nav .utility-nav li a.button {
+  height: 32px;
+}
+.nav .utility-nav li a.button:hover, .nav .utility-nav li a.button:focus {
+  background: #95b464;
 }
 .nav .utility-nav li a:hover, .nav .utility-nav li a:focus {
   color: inherit;
+  background: #f6f9fc;
 }
 .nav .utility-nav li i {
   font-size: 14px;
@@ -1044,6 +1034,13 @@ hr::before {
   border-radius: 0.5em;
   opacity: 0.85;
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  line-height: inherit;
+}
+.nav .utility-nav select::-ms-expand {
+  display: none;
 }
 .nav .utility-nav select:hover, .nav .utility-nav select:focus {
   background: #f6f9fc;
@@ -1187,6 +1184,14 @@ body.navigation-open .menu-overlay {
   opacity: 0.65;
   cursor: pointer;
 }
+.menu .menu-icon {
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  left: 1em;
+  transform: translate(0, -50%);
+  color: #4b82ba;
+}
 .menu .menu-head {
   width: 100%;
   padding: 2em;
@@ -1212,6 +1217,7 @@ body.navigation-open .menu-overlay {
   padding: 0 1em;
 }
 .menu .group .menu-section {
+  position: relative;
   width: calc(25% - 2em);
   padding: 2em;
   margin: 1em;
@@ -1249,21 +1255,22 @@ body.navigation-open .menu-overlay {
   font-family: inherit;
   line-height: inherit;
   width: 100%;
-  background: #f8f8f8;
+  background: #f1f2f3;
   border-radius: 5rem;
   border: 2px solid #fff;
   outline: none;
 }
 .menu input[type=text]:focus {
   border-color: #ba4b67;
-  background: #f1f2f3;
+  background: #f6f9fc;
 }
 .menu h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5em;
+  color: #1c334a;
 }
 .menu h3 a {
-  color: #4b82ba;
+  color: #1c334a;
   text-decoration: none;
   transition: 0.3s cubic-bezier(0.53, 0.21, 0, 1);
 }
@@ -1405,7 +1412,7 @@ body.navigation-open .menu-overlay {
   list-style: none;
 }
 .mobile_nav ul.top {
-  background: #f1f2f3;
+  background: #f6f9fc;
   padding-bottom: 5em;
 }
 .mobile_nav ul.top > li > a {
@@ -1455,7 +1462,7 @@ body.navigation-open .menu-overlay {
   transition: max-height 0.15s ease-in-out;
 }
 .mobile_nav .drop {
-  background: #f1f2f3;
+  background: #f6f9fc;
   border-left: 0.5em solid #4b82ba;
 }
 .mobile_nav .drop li:not(:last-of-type) {
@@ -1510,8 +1517,10 @@ body.menu-open .mobile_nav {
 
 .footer {
   width: 100%;
-  background: #f8f8f8;
-  margin: 1em 0 0;
+  border-top: 1px solid #f1f2f3;
+}
+body#home .footer {
+  border-top: none;
 }
 .footer .group {
   margin-top: 3em;
@@ -1522,7 +1531,7 @@ body.menu-open .mobile_nav {
 }
 .footer-logo img {
   width: 100%;
-  max-width: 100px;
+  max-width: 160px;
 }
 .footer-nav {
   flex: 4;
@@ -1754,8 +1763,14 @@ body.menu-open .mobile_nav {
   color: #a1bc75;
   border-color: #a1bc75;
 }
+.button-secondary {
+  background: #a1bc75;
+}
+.button-secondary:hover, .button-secondary:focus {
+  background: #95b464;
+}
 .button[disabled] {
-  background: #f1f2f3;
+  background: #f6f9fc;
   color: #080f16;
   cursor: default;
 }
@@ -1956,7 +1971,7 @@ body.menu-open .mobile_nav {
   transition: 0.3s cubic-bezier(0.53, 0.21, 0, 1);
 }
 .autocomplete-items a:hover, .autocomplete-items a:focus, .autocomplete-items a.autocomplete-active {
-  background: #f1f2f3;
+  background: #f6f9fc;
 }
 
 .search {
@@ -2079,6 +2094,14 @@ p.simplesearch-results, figure:not(.fig) figcaption.simplesearch-results,
 .blog {
   margin: 0 auto;
 }
+.blog .section-heading {
+  text-align: center;
+  margin-bottom: 2em;
+}
+.blog.blog-widget {
+  background: #f6f9fc;
+  padding: 5vh 0;
+}
 .blog.blog-layout .post:first-of-type {
   width: 100%;
   display: flex;
@@ -2111,13 +2134,14 @@ p.simplesearch-results, figure:not(.fig) figcaption.simplesearch-results,
 .blog .post {
   width: calc(33.333% - 2em);
   margin: 1em;
-  border-radius: 0.25em;
   overflow: hidden;
   background: #fff;
+  border-radius: 0.5em;
+  box-shadow: 0 0.625em 1.25em rgba(35, 45, 75, 0.025);
   transition: 0.3s cubic-bezier(0.53, 0.21, 0, 1);
 }
 .blog .post:hover, .blog .post:focus {
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0.625em 1.25em rgba(35, 45, 75, 0.125);
 }
 .blog .cover {
   margin: 0 auto;
@@ -2131,7 +2155,7 @@ p.simplesearch-results, figure:not(.fig) figcaption.simplesearch-results,
   display: none;
 }
 .blog .info {
-  padding: 1em;
+  padding: 1em 2em 2em;
 }
 .blog .title {
   font-size: 24px;
@@ -2596,7 +2620,7 @@ table {
   height: auto !important;
   display: table;
   background: #fff;
-  border-color: #f1f2f3;
+  border-color: #f6f9fc;
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -2637,26 +2661,26 @@ table td {
 .impression .text .eyebrow {
   color: #1c334a;
 }
-.impression .text h1 {
+.impression .text h1, .impression .video-intro .details .text h2, .video-intro .details .impression .text h2, .impression .video-intro .details .text .statistics .value, .video-intro .details .impression .text .statistics .value, .impression .statistics .video-intro .details .text .value, .statistics .video-intro .details .impression .text .value, .impression .donation-widget .text h2, .donation-widget .impression .text h2, .impression .donation-widget .text .statistics .value, .donation-widget .impression .text .statistics .value, .impression .statistics .donation-widget .text .value, .statistics .donation-widget .impression .text .value, .impression .text .statistics .section-heading h2, .impression .text .statistics .section-heading .value, .statistics .section-heading .impression .text h2, .statistics .section-heading .impression .text .value, .impression .text .blog .section-heading h2, .impression .text .blog .section-heading .statistics .value, .statistics .impression .text .blog .section-heading .value, .blog .section-heading .impression .text h2, .blog .section-heading .impression .text .statistics .value {
   max-width: 550px;
   margin: 0.5em 0;
   line-height: 1.4;
 }
-.impression .text h1 b {
+.impression .text h1 b, .impression .video-intro .details .text h2 b, .video-intro .details .impression .text h2 b, .impression .video-intro .details .text .statistics .value b, .video-intro .details .impression .text .statistics .value b, .impression .statistics .video-intro .details .text .value b, .statistics .video-intro .details .impression .text .value b, .impression .donation-widget .text h2 b, .donation-widget .impression .text h2 b, .impression .donation-widget .text .statistics .value b, .donation-widget .impression .text .statistics .value b, .impression .statistics .donation-widget .text .value b, .statistics .donation-widget .impression .text .value b, .impression .text .statistics .section-heading h2 b, .impression .text .statistics .section-heading .value b, .statistics .section-heading .impression .text h2 b, .statistics .section-heading .impression .text .value b, .impression .text .blog .section-heading h2 b, .impression .text .blog .section-heading .statistics .value b, .statistics .impression .text .blog .section-heading .value b, .blog .section-heading .impression .text h2 b, .blog .section-heading .impression .text .statistics .value b {
   position: relative;
   font-weight: inherit;
 }
-.impression .text h1 b span:not(.p) {
+.impression .text h1 b span:not(.p), .impression .video-intro .details .text h2 b span:not(.p), .video-intro .details .impression .text h2 b span:not(.p), .impression .video-intro .details .text .statistics .value b span:not(.p), .video-intro .details .impression .text .statistics .value b span:not(.p), .impression .statistics .video-intro .details .text .value b span:not(.p), .statistics .video-intro .details .impression .text .value b span:not(.p), .impression .donation-widget .text h2 b span:not(.p), .donation-widget .impression .text h2 b span:not(.p), .impression .donation-widget .text .statistics .value b span:not(.p), .donation-widget .impression .text .statistics .value b span:not(.p), .impression .statistics .donation-widget .text .value b span:not(.p), .statistics .donation-widget .impression .text .value b span:not(.p), .impression .text .statistics .section-heading h2 b span:not(.p), .impression .text .statistics .section-heading .value b span:not(.p), .statistics .section-heading .impression .text h2 b span:not(.p), .statistics .section-heading .impression .text .value b span:not(.p), .impression .text .blog .section-heading h2 b span:not(.p), .impression .text .blog .section-heading .statistics .value b span:not(.p), .statistics .impression .text .blog .section-heading .value b span:not(.p), .blog .section-heading .impression .text h2 b span:not(.p), .blog .section-heading .impression .text .statistics .value b span:not(.p) {
   text-shadow: 0 0px 22px rgba(255, 255, 255, 0.4);
 }
-.impression .text h1 b span.p {
+.impression .text h1 b span.p, .impression .video-intro .details .text h2 b span.p, .video-intro .details .impression .text h2 b span.p, .impression .video-intro .details .text .statistics .value b span.p, .video-intro .details .impression .text .statistics .value b span.p, .impression .statistics .video-intro .details .text .value b span.p, .statistics .video-intro .details .impression .text .value b span.p, .impression .donation-widget .text h2 b span.p, .donation-widget .impression .text h2 b span.p, .impression .donation-widget .text .statistics .value b span.p, .donation-widget .impression .text .statistics .value b span.p, .impression .statistics .donation-widget .text .value b span.p, .statistics .donation-widget .impression .text .value b span.p, .impression .text .statistics .section-heading h2 b span.p, .impression .text .statistics .section-heading .value b span.p, .statistics .section-heading .impression .text h2 b span.p, .statistics .section-heading .impression .text .value b span.p, .impression .text .blog .section-heading h2 b span.p, .impression .text .blog .section-heading .statistics .value b span.p, .statistics .impression .text .blog .section-heading .value b span.p, .blog .section-heading .impression .text h2 b span.p, .blog .section-heading .impression .text .statistics .value b span.p {
   position: absolute;
   bottom: 0;
   left: -0.125em;
   right: -0.25em;
   z-index: -1;
 }
-.impression .text h1 b span.p img {
+.impression .text h1 b span.p img, .impression .video-intro .details .text h2 b span.p img, .video-intro .details .impression .text h2 b span.p img, .impression .video-intro .details .text .statistics .value b span.p img, .video-intro .details .impression .text .statistics .value b span.p img, .impression .statistics .video-intro .details .text .value b span.p img, .statistics .video-intro .details .impression .text .value b span.p img, .impression .donation-widget .text h2 b span.p img, .donation-widget .impression .text h2 b span.p img, .impression .donation-widget .text .statistics .value b span.p img, .donation-widget .impression .text .statistics .value b span.p img, .impression .statistics .donation-widget .text .value b span.p img, .statistics .donation-widget .impression .text .value b span.p img, .impression .text .statistics .section-heading h2 b span.p img, .impression .text .statistics .section-heading .value b span.p img, .statistics .section-heading .impression .text h2 b span.p img, .statistics .section-heading .impression .text .value b span.p img, .impression .text .blog .section-heading h2 b span.p img, .impression .text .blog .section-heading .statistics .value b span.p img, .statistics .impression .text .blog .section-heading .value b span.p img, .blog .section-heading .impression .text h2 b span.p img, .blog .section-heading .impression .text .statistics .value b span.p img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -2722,4 +2746,106 @@ table td {
 }
 .statistics .value {
   margin: 0.5em 0;
+}
+
+.donation-widget {
+  background: #a1bc75;
+  margin-bottom: 0;
+  padding: 5vh 0;
+}
+.donation-widget .group {
+  padding: 4em 3em;
+  border-radius: 1em;
+  text-align: center;
+}
+.donation-widget .text {
+  max-width: 46em;
+  margin: 0 auto;
+}
+.donation-widget .text h2, .donation-widget .text .statistics .value, .statistics .donation-widget .text .value {
+  margin-bottom: 0.5em;
+}
+.donation-widget .buttons {
+  margin-top: 2em;
+  justify-content: center;
+}
+
+.video-intro {
+  background: #f6f9fc;
+  margin-bottom: 0;
+}
+.video-intro .container {
+  padding: 10vh 10vh;
+  max-width: 100%;
+}
+@media (max-width: 968px) {
+  .video-intro .container {
+    padding: 2em;
+  }
+}
+.video-intro .group {
+  align-items: center;
+}
+@media (max-width: 968px) {
+  .video-intro .group {
+    flex-flow: column nowrap;
+  }
+}
+.video-intro .video {
+  flex: 1;
+}
+@media (max-width: 968px) {
+  .video-intro .video {
+    width: 100%;
+  }
+}
+.video-intro .details {
+  flex: 1;
+}
+@media (max-width: 968px) {
+  .video-intro .details {
+    width: 100%;
+  }
+}
+.video-intro .details .text {
+  padding: 5vw;
+}
+@media (max-width: 968px) {
+  .video-intro .details .text {
+    padding: 5vh 0;
+  }
+}
+.video-intro .details .text h2, .video-intro .details .text .statistics .value, .statistics .video-intro .details .text .value {
+  text-transform: initial;
+}
+.video-intro .details .text .description {
+  max-width: 46em;
+}
+
+.services .group {
+  margin: 0 -1em;
+}
+.services-item {
+  width: calc(50% - 2em);
+  margin: 1em;
+  padding: 2em;
+  border-radius: 1em;
+  box-shadow: 0 0.625em 1.25em rgba(35, 45, 75, 0.125);
+}
+.services-item h3 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.services-item ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+.services-item ul li {
+  padding-bottom: 0.25em;
+  margin-bottom: 0.25em;
+}
+.services-item ul a {
+  color: #1c334a;
+  text-decoration: none;
 }

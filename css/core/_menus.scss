@@ -115,6 +115,15 @@ body {
         cursor: pointer;
     }
 
+    .menu-icon {
+        font-size: 2rem;
+        position: absolute;
+        top: 0;
+        left: 1em;
+        transform: translate(0, -50%);
+        color: $color-1;
+    }
+
     .menu-head {
         width: 100%;
         padding: 2em;
@@ -144,6 +153,7 @@ body {
         padding: 0 1em;
 
         .menu-section {
+            position: relative;
             width: calc(25% - 2em);
             padding: 2em;
             margin: 1em;
@@ -201,9 +211,10 @@ body {
         //letter-spacing: 0.025em;
         font-size: 1.5rem;
         margin-bottom: 0.5em;
+        color: $color-base;
 
         a {
-            color: $color-1;
+            color: $color-base;
             text-decoration: none;
             transition: $transition-1;
 
