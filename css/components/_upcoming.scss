@@ -1,0 +1,47 @@
+.upcoming {
+    padding: 5vh 0;
+
+    .container {
+    }
+
+    .group {
+        h2 {
+            text-align: center;
+        }
+    }
+
+    &-item {
+        width: calc(50% - 2em);
+        margin: 1em;
+    }
+
+    &-subitem {
+        margin: 1em auto;
+
+        a {
+            display: block;
+            padding: 2em;
+            background: $color-grey-1;
+            border-radius: 0.5em;
+            text-decoration: none;
+            color: $color-base;
+
+            transition: $transition-1;
+
+            &:hover,
+            &:focus {
+                transform: translate(0, -0.25em);
+                box-shadow: 0 0.625em 1.25em rgba(35, 45, 75, 0.025);
+            }
+        }
+
+        .dates {
+            margin-bottom: 0;
+            margin-top: 0.5em;
+        }
+
+        .location {
+            margin-bottom: 0;
+        }
+    }
+}

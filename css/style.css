@@ -2849,3 +2849,37 @@ table td {
   color: #1c334a;
   text-decoration: none;
 }
+
+.upcoming {
+  padding: 5vh 0;
+}
+.upcoming .group h2, .upcoming .group .statistics .value, .statistics .upcoming .group .value {
+  text-align: center;
+}
+.upcoming-item {
+  width: calc(50% - 2em);
+  margin: 1em;
+}
+.upcoming-subitem {
+  margin: 1em auto;
+}
+.upcoming-subitem a {
+  display: block;
+  padding: 2em;
+  background: #f6f9fc;
+  border-radius: 0.5em;
+  text-decoration: none;
+  color: #1c334a;
+  transition: 0.3s cubic-bezier(0.53, 0.21, 0, 1);
+}
+.upcoming-subitem a:hover, .upcoming-subitem a:focus {
+  transform: translate(0, -0.25em);
+  box-shadow: 0 0.625em 1.25em rgba(35, 45, 75, 0.025);
+}
+.upcoming-subitem .dates {
+  margin-bottom: 0;
+  margin-top: 0.5em;
+}
+.upcoming-subitem .location {
+  margin-bottom: 0;
+}
