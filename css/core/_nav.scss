@@ -67,6 +67,10 @@
         padding: 0.25em 0;
         cursor: pointer;
 
+        &:hover {
+            border-color: $color-1;
+        }
+
         &.menu-open {
             border-color: $color-1;
             color: $color-1;
