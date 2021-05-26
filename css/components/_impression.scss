@@ -1,17 +1,24 @@
 .impression {
     position: relative;
+    margin-top: 1em;
 
     .container {
         padding: 3em 0;
     }
 
     .group {
+        position: relative;
         //align-items: stretch;
         align-items: center;
+        width: 100%;
+    }
+
+    .details {
+        flex: 1;
     }
 
     .text {
-        flex: 1;
+        width: 100%;
         padding: 1em;
 
         .eyebrow {
@@ -22,36 +29,11 @@
             //@include fluid('font-size', 2.5rem, 5.5rem);
             max-width: 550px;
             margin: 0.5em 0;
-            line-height: 1.4;
-
-            b {
-                position: relative;
-                font-weight: inherit;
-
-                span:not(.p) {
-                    text-shadow: 0 0px 22px rgb(255 255 255 / 40%);
-                }
-
-                span.p {
-                    position: absolute;
-                    bottom: 0;
-                    left: -0.125em;
-                    right: -0.25em;
-                    z-index: -1;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: contain;
-                        object-position: bottom;
-                    }
-                }
-            }
+            line-height: 1.2;
         }
 
         .description {
             max-width: 500px;
-            opacity: 0.8;
         }
 
         .buttons {
@@ -60,12 +42,18 @@
     }
 
     .flickity {
-        &-viewport {
+        &-enabled {
+            position: static;
+            padding-bottom: 1em;
+        }
+
+        &-viewport,
+        &-slider {
             width: 100%;
         }
 
         &-page-dots {
-            bottom: 1em;
+            top: 100%;
 
             .dot {
                 width: 100%;
@@ -81,6 +69,25 @@
                     background: $color-1;
                     opacity: 1;
                 }
+            }
+        }
+
+        &-button {
+            &.previous {
+                left: auto;
+                right: calc(100% + 1.5em);
+            }
+
+            &.next {
+                right: auto;
+                left: calc(100% + 1.5em);
+            }
+
+            opacity: 0.25;
+
+            &:hover,
+            &:focus {
+                opacity: 1;
             }
         }
     }
@@ -106,6 +113,7 @@
             width: 100%;
             border-radius: 0.25em;
             overflow: hidden;
+            aspect-ratio: 5 / 4;
         }
 
         img {

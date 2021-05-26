@@ -103,17 +103,34 @@ $('.slideshow .container').flickity({
     autoPlay: 5000,
 })
 
-$('.impression .images').flickity({
+$('.impression .group .images').flickity({
     cellSelector: '.image',
     wrapAround: true,
     adaptiveHeight: false,
     cellAlign: 'center',
     prevNextButtons: false,
-    pageDots: true,
+    pageDots: false,
     imagesLoaded: true,
-    autoPlay: 5000,
+    autoPlay: false,
     selectedAttraction: 0.01,
     friction: 0.2,
+    asNavFor: '.impression .group .details',
+    contain: true,
+    draggable: false,
+})
+
+$('.impression .group .details').flickity({
+    cellSelector: '.text',
+    wrapAround: true,
+    adaptiveHeight: false,
+    cellAlign: 'center',
+    prevNextButtons: true,
+    pageDots: true,
+    imagesLoaded: true,
+    autoPlay: 8000,
+    selectedAttraction: 0.01,
+    friction: 0.2,
+    draggable: false,
 })
 
 //Universal Tables

@@ -36,6 +36,71 @@
         </div>
 
         <header class="header" role="banner">
+            <div class="utility-nav">
+                <div class="container">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span class="icon">
+                                    <i class="fad fa-search"></i>
+                                </span>
+                                <span class="label">Search</span>
+                            </a>
+                        </li>
+                        <li class="language">
+                            <select onchange="doGTranslate(this);">
+                                <option value="">Language...</option>
+                                <option value="en|en">English</option>
+                                <option value="en|es">Spanish</option>
+                                <option value="en|fr">French</option>
+                                <option value="en|de">German</option>
+                                <option value="en|it">Italian</option>
+                                <option value="en|sv">Swedish</option>
+                                <option value="en|fi">Finnish</option>
+                                <option value="en|da">Danish</option>
+                                <option value="en|nl">Dutch</option>
+                                <option value="en|ja">Japanese</option>
+                                <option value="en|pt">Portuguese</option>
+                                <option value="en|ru">Russian</option>
+                                <option value="en|ar">Arabic</option>
+                                <option value="en|iw">Hebrew</option>
+                                <option value="en|hi">Hindi</option>
+                            </select>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon">
+                                    <i class="fad fa-globe-americas"></i>
+                                </span>
+                                <span class="label">Find Us</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="icon">
+                                    <i class="fad fa-badge"></i>
+                                </span>
+                                <span class="label">Latest</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                ><span class="icon">
+                                    <i class="fad fa-newspaper"></i>
+                                </span>
+                                <span class="label">Newsletter</span></a
+                            >
+                        </li>
+                        <li>
+                            <a class="button button-tertiary" href="#">
+                                <i class="fad fa-usd-circle"></i>
+                                <span>Donate</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="container">
                 <div class="group">
                     <div class="logo">
@@ -45,43 +110,6 @@
                     </div>
 
                     <nav class="nav" role="navigation" aria-label="Site Menu">
-                        <ul class="utility-nav">
-                            <li>
-                                <a href="#">Search</a>
-                            </li>
-                            <li>
-                                <select onchange="doGTranslate(this);">
-                                    <option value="">Language...</option>
-                                    <option value="en|en">English</option>
-                                    <option value="en|es">Spanish</option>
-                                    <option value="en|fr">French</option>
-                                    <option value="en|de">German</option>
-                                    <option value="en|it">Italian</option>
-                                    <option value="en|sv">Swedish</option>
-                                    <option value="en|fi">Finnish</option>
-                                    <option value="en|da">Danish</option>
-                                    <option value="en|nl">Dutch</option>
-                                    <option value="en|ja">Japanese</option>
-                                    <option value="en|pt">Portuguese</option>
-                                    <option value="en|ru">Russian</option>
-                                    <option value="en|ar">Arabic</option>
-                                    <option value="en|iw">Hebrew</option>
-                                    <option value="en|hi">Hindi</option>
-                                </select>
-                            </li>
-                            <li>
-                                <a href="#">Find Us</a>
-                            </li>
-                            <li>
-                                <a href="#">Latest</a>
-                            </li>
-                            <li>
-                                <a href="#">Newsletter</a>
-                            </li>
-                            <li>
-                                <a class="button button-secondary" href="#">Donate</a>
-                            </li>
-                        </ul>
                         <ul>
                             <li>
                                 <button data-pair="1">
@@ -94,17 +122,17 @@
                                 </button>
                             </li>
                             <li>
-                                <button data-pair="4">
+                                <button data-pair="3">
                                     About Us <i class="far fa-angle-down" aria-hidden="true"></i>
                                 </button>
                             </li>
                             <li>
-                                <button data-pair="5">
+                                <button data-pair="4">
                                     Careers <i class="far fa-angle-down" aria-hidden="true"></i>
                                 </button>
                             </li>
                             <li>
-                                <button data-pair="3">
+                                <button data-pair="5">
                                     Get Involved <i class="far fa-angle-down" aria-hidden="true"></i>
                                 </button>
                             </li>
@@ -115,284 +143,805 @@
                     <div class="menus">
                         <div class="menu" aria-hidden="true" aria-expanded="false" tabindex="-1" data-pair="1">
                             <div class="container">
-                                <div class="menu-head">
-                                    <h2>Get Help</h2>
-                                </div>
-                                <div class="group" data-count="3">
-                                    <div class="menu-section">
-                                        <div class="menu-icon">
-                                            <i class="fad fa-house"></i>
-                                        </div>
-                                        <h3 class="menu-heading"><a href="#">Housing</a></h3>
-                                        <ul class="menu-nav">
-                                            <li><a href="#">Financial Help</a></li>
-                                            <li><a href="#">Tenants Rights & Resources</a></li>
-                                            <li><a href="#">Mobile Home Support</a></li>
-                                            <li><a href="#">Fair Housing & Discrimination</a></li>
-                                            <li><a href="#">Weatherization</a></li>
-                                            <li><a href="#">Homelessness</a></li>
+                                <div class="group">
+                                    <div class="menu-navigation">
+                                        <ul class="menu-navigation-items">
+                                            <li>
+                                                <button
+                                                    class="menu-navigation-link menu-navigation-link--open"
+                                                    data-pair="0"
+                                                    data-id="0"
+                                                >
+                                                    <span class="icon">
+                                                        <i class="fad fa-house"></i>
+                                                    </span>
+                                                    <span>Housing</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="menu-navigation-link" data-pair="0" data-id="1">
+                                                    <span class="icon">
+                                                        <i class="fad fa-utensils"></i>
+                                                    </span>
+                                                    <span>Food</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="menu-navigation-link" data-pair="0" data-id="2">
+                                                    <span class="icon">
+                                                        <i class="fad fa-wrench"></i>
+                                                    </span>
+                                                    <span>Heat & Utilities</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="menu-navigation-link" data-pair="0" data-id="3">
+                                                    <span class="icon">
+                                                        <i class="fad fa-users"></i>
+                                                    </span>
+                                                    <span>Children & Families</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="menu-navigation-link" data-pair="0" data-id="4">
+                                                    <span class="icon">
+                                                        <i class="fad fa-usd-circle"></i>
+                                                    </span>
+                                                    <span>Finances</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="menu-navigation-link" data-pair="0" data-id="5">
+                                                    <span class="icon">
+                                                        <i class="fad fa-fist-raised"></i>
+                                                    </span>
+                                                    <span>Domestic Violence</span>
+                                                </button>
+                                            </li>
                                         </ul>
                                     </div>
-                                    <div class="menu-section">
-                                        <div class="menu-icon">
-                                            <i class="fad fa-utensils"></i>
+                                    <div class="menu-navigation-panels">
+                                        <div
+                                            class="menu-navigation-panel menu-navigation-panel--open"
+                                            data-pair="0"
+                                            data-id="0"
+                                        >
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Housing</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Financial Help</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Tenants Rights & Resources</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Mobile Home Support</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Fair Housing & Discrimination</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Weatherization</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Homelessness</a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <h3 class="menu-heading"><a href="#">Food</a></h3>
-                                        <ul class="menu-nav">
-                                            <li><a href="#">TBD</a></li>
-                                            <li><a href="#">Food Shelves</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-section">
-                                        <div class="menu-icon">
-                                            <i class="fad fa-wrench"></i>
+                                        <div class="menu-navigation-panel" data-pair="0" data-id="1">
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Food</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Burlington (FC)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Middlebury (ASF)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">St. Albans (NWFF)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Non-CVOEO Food Shelves</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Help Purchasing Groceries</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Burlington</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Burlington</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Burlington</a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <h3 class="menu-heading"><a href="#">Heat & Utilities</a></h3>
-                                        <ul class="menu-nav">
-                                            <li><a href="#">Fuel Assistance</a></li>
-                                            <li><a href="#">Utilities</a></li>
-                                            <li><a href="#">Furnace Repair</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-section">
-                                        <div class="menu-icon">
-                                            <i class="fad fa-users"></i>
+                                        <div class="menu-navigation-panel" data-pair="0" data-id="2">
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Heat & Utilities</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <h3 class="menu-heading"><a href="#">Children & Families</a></h3>
-                                        <ul class="menu-nav">
-                                            <li><a href="#">Head Start</a></li>
-                                            <li><a href="#">CIS</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-section">
-                                        <div class="menu-icon">
-                                            <i class="fad fa-usd-circle"></i>
+                                        <div class="menu-navigation-panel" data-pair="0" data-id="3">
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Children & Families</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <h3 class="menu-heading"><a href="#">Finances</a></h3>
-                                        <ul class="menu-nav">
-                                            <li><a href="#">Personal Resources & Coaching</a></li>
-                                            <li><a href="#">Micro-business Resources & Coaching</a></li>
-                                            <li><a href="#">New American Resources & Coaching</a></li>
-                                            <li><a href="#">Savings Program</a></li>
-                                            <li><a href="#">Tax Preparation Assistance</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-section">
-                                        <div class="menu-icon">
-                                            <i class="fad fa-fist-raised"></i>
+                                        <div class="menu-navigation-panel" data-pair="0" data-id="4">
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Finances</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <h3 class="menu-heading"><a href="#">Domestic Violence</a></h3>
-                                        <ul class="menu-nav">
-                                            <li><a href="#">Shelters & Services</a></li>
-                                            <li><a href="#">Non-CVOEO Resources</a></li>
-                                        </ul>
+                                        <div class="menu-navigation-panel" data-pair="0" data-id="5">
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Domestic Violence</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <!-- <div class="menu-actions buttons-center">
-                                        <a href="#" class="button"
-                                            ><span>Explore more advice</span><i class="far fa-long-arrow-right"></i
-                                        ></a>
-                                    </div> -->
                                 </div>
                             </div>
-                            <button class="menu-closer" title="Close Menu">
-                                <i class="far fa-chevron-up"></i>
-                            </button>
                         </div>
                         <div class="menu" aria-hidden="true" aria-expanded="false" tabindex="-1" data-pair="2">
                             <div class="container">
-                                <div class="menu-head">
-                                    <h2>Learn</h2>
-                                    <!-- <a href="#" class="button button-size-small button-two"
-                                        ><span>Find a Course</span><i class="far fa-arrow-right"></i
-                                    ></a> -->
-                                </div>
-                                <div class="group" data-count="3">
-                                    <div class="menu-section">
-                                        <div class="menu-icon">
-                                            <i class="fad fa-calendar"></i>
-                                        </div>
-                                        <h3 class="menu-heading">
-                                            <a href="#">Calendar</a>
-                                        </h3>
-                                        <ul class="menu-nav">
-                                            <li><a href="#">Event #1</a></li>
-                                            <li><a href="#">Event #2</a></li>
-                                            <li><a href="#">Event #3</a></li>
+                                <div class="group">
+                                    <div class="menu-navigation">
+                                        <ul class="menu-navigation-items">
+                                            <li>
+                                                <button
+                                                    class="menu-navigation-link menu-navigation-link--open"
+                                                    data-pair="1"
+                                                    data-id="0"
+                                                >
+                                                    <span class="icon">
+                                                        <i class="fad fa-calendar"></i>
+                                                    </span>
+                                                    <span>Calendar</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="menu-navigation-link" data-pair="1" data-id="1">
+                                                    <span class="icon">
+                                                        <i class="fad fa-usd-circle"></i>
+                                                    </span>
+                                                    <span>Personal Finance Classes</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="menu-navigation-link" data-pair="1" data-id="2">
+                                                    <span class="icon">
+                                                        <i class="fad fa-users-class"></i>
+                                                    </span>
+                                                    <span>Micro Business Classes</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="menu-navigation-link" data-pair="1" data-id="3">
+                                                    <span class="icon">
+                                                        <i class="fad fa-house-return"></i>
+                                                    </span>
+                                                    <span>Renters Workshops</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="menu-navigation-link" data-pair="1" data-id="4">
+                                                    <span class="icon">
+                                                        <i class="fad fa-house-user"></i>
+                                                    </span>
+                                                    <span>Fair Housing</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="menu-navigation-link" data-pair="1" data-id="5">
+                                                    <span class="icon">
+                                                        <i class="fad fa-graduation-cap"></i>
+                                                    </span>
+                                                    <span>Community Kitchen Academy</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="menu-navigation-link" data-pair="1" data-id="6">
+                                                    <span class="icon">
+                                                        <i class="fad fa-book-open"></i>
+                                                    </span>
+                                                    <span>Library</span>
+                                                </button>
+                                            </li>
                                         </ul>
                                     </div>
-                                    <div class="menu-section">
-                                        <div class="menu-icon">
-                                            <i class="fad fa-usd-circle"></i>
+                                    <div class="menu-navigation-panels">
+                                        <div
+                                            class="menu-navigation-panel menu-navigation-panel--open"
+                                            data-pair="1"
+                                            data-id="0"
+                                        >
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Calendar</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Event #1</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Event #2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Event #3</a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <h3 class="menu-heading"><a href="#">Personal Finance Classes</a></h3>
-                                        <ul class="menu-nav">
-                                            <li><a href="#">Class #1</a></li>
-                                            <li><a href="#">Class #2</a></li>
-                                            <li><a href="#">Class #3</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-section">
-                                        <div class="menu-icon">
-                                            <i class="fad fa-users-class"></i>
+                                        <div class="menu-navigation-panel" data-pair="1" data-id="1">
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Personal Finance Classes</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Class #1</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Class #2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Class #3</a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <h3 class="menu-heading"><a href="#">Micro Business Workshops</a></h3>
-                                        <ul class="menu-nav">
-                                            <li><a href="#">Workshop #1</a></li>
-                                            <li><a href="#">Workshop #2</a></li>
-                                            <li><a href="#">Workshop #3</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-section">
-                                        <div class="menu-icon">
-                                            <i class="fad fa-house-return"></i>
+                                        <div class="menu-navigation-panel" data-pair="1" data-id="2">
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Micro Business Workshops</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Workshop #1</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Workshop #2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Workshop #3</a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <h3 class="menu-heading"><a href="#">Renters Workshops</a></h3>
-                                        <ul class="menu-nav">
-                                            <li><a href="#">Workshop #1</a></li>
-                                            <li><a href="#">Workshop #2</a></li>
-                                            <li><a href="#">Workshop #3</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-section">
-                                        <div class="menu-icon">
-                                            <i class="fad fa-house-user"></i>
+                                        <div class="menu-navigation-panel" data-pair="1" data-id="3">
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Renter's Workshops</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Workshop #1</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Workshop #2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Workshop #3</a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <h3 class="menu-heading"><a href="#">Fair Housing</a></h3>
-                                        <ul class="menu-nav">
-                                            <li><a href="#">Rights & Responsibilities</a></li>
-                                            <!-- <li><a href="#">Speakers #2</a></li>
-                                            <li><a href="#">Speakers #3</a></li> -->
-                                        </ul>
-                                    </div>
-                                    <div class="menu-section">
-                                        <div class="menu-icon">
-                                            <i class="fad fa-file-powerpoint"></i>
+                                        <div class="menu-navigation-panel" data-pair="1" data-id="4">
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Fair Housing</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Rights & Responsibilities</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <h3 class="menu-heading"><a href="#">Publications</a></h3>
-                                        <ul class="menu-nav">
-                                            <li><a href="#">Pub #1</a></li>
-                                            <li><a href="#">Pub #2</a></li>
-                                            <li><a href="#">Pub #3</a></li>
-                                        </ul>
+                                        <div class="menu-navigation-panel" data-pair="1" data-id="5">
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Community Kitchen Academy</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu-navigation-panel" data-pair="1" data-id="6">
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Library</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Translated Resources</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Recorded Presentations</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <!-- <div class="menu-actions buttons-center">
-                                        <a href="#" class="button"
-                                            ><span>Browse all programs & training's</span
-                                            ><i class="far fa-long-arrow-right"></i
-                                        ></a>
-                                    </div> -->
                                 </div>
                             </div>
-                            <button class="menu-closer" title="Close Menu">
-                                <i class="far fa-chevron-up"></i>
-                            </button>
                         </div>
                         <div class="menu" aria-hidden="true" aria-expanded="false" tabindex="-1" data-pair="3">
                             <div class="container">
-                                <div class="menu-head">
-                                    <h2>Get Involved</h2>
-                                    <!-- <a href="#" class="button button-size-small button-two"
-                                        ><span>Donate</span><i class="far fa-arrow-right"></i
-                                    ></a> -->
-                                </div>
-                                <div class="group" data-count="2">
-                                    <div class="menu-section">
-                                        <div class="menu-icon">
-                                            <i class="fad fa-donate"></i>
-                                        </div>
-                                        <h3 class="menu-heading"><a href="#">Ways to Give</a></h3>
-                                        <ul class="menu-nav">
-                                            <li><a href="#">Link</a></li>
-                                            <li><a href="#">Link</a></li>
-                                            <li><a href="#">Link</a></li>
+                                <div class="group">
+                                    <div class="menu-navigation">
+                                        <ul class="menu-navigation-items">
+                                            <li>
+                                                <button
+                                                    class="menu-navigation-link menu-navigation-link--open"
+                                                    data-pair="3"
+                                                    data-id="0"
+                                                >
+                                                    <span class="icon">
+                                                        <i class="fad fa-user-friends"></i>
+                                                    </span>
+                                                    <span>CVOEO</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="menu-navigation-link" data-pair="3" data-id="1">
+                                                    <span class="icon">
+                                                        <i class="fad fa-exclamation-circle"></i>
+                                                    </span>
+                                                    <span>Impact</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="menu-navigation-link" data-pair="3" data-id="2">
+                                                    <span class="icon">
+                                                        <i class="fad fa-home-heart"></i>
+                                                    </span>
+                                                    <span>Who We Are</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="menu-navigation-link" data-pair="3" data-id="3">
+                                                    <span class="icon">
+                                                        <i class="fad fa-newspaper"></i>
+                                                    </span>
+                                                    <span>Newsroom</span>
+                                                </button>
+                                            </li>
                                         </ul>
                                     </div>
-                                    <div class="menu-section">
-                                        <div class="menu-icon">
-                                            <i class="fad fa-calendar-day"></i>
+                                    <div class="menu-navigation-panels">
+                                        <div
+                                            class="menu-navigation-panel menu-navigation-panel--open"
+                                            data-pair="3"
+                                            data-id="0"
+                                        >
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>CVOEO</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Mission</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Contact Us</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <h3 class="menu-heading"><a href="#">Events</a></h3>
-                                        <ul class="menu-nav">
-                                            <li><a href="#">Event #1</a></li>
-                                            <li><a href="#">Event #2</a></li>
-                                            <li><a href="#">Event #3</a></li>
-                                        </ul>
+                                        <div class="menu-navigation-panel" data-pair="3" data-id="1">
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Impact</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Study #1</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Study #2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Study #3</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu-navigation-panel" data-pair="3" data-id="2">
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Who We Are</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Staff Directory</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Admin & Leadership</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Programs</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Office of Racial Equity</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Board</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu-navigation-panel" data-pair="3" data-id="3">
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Newsroom</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Blog</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">CVOEO in the News</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">What we're following</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <button class="menu-closer" title="Close Menu">
-                                <i class="far fa-chevron-up"></i>
-                            </button>
                         </div>
                         <div class="menu" aria-hidden="true" aria-expanded="false" tabindex="-1" data-pair="4">
                             <div class="container">
-                                <div class="menu-head">
-                                    <h2>About Us</h2>
-                                </div>
-                                <div class="group" data-count="3">
-                                    <div class="menu-section">
-                                        <div class="menu-icon">
-                                            <i class="fad fa-user-friends"></i>
-                                        </div>
-                                        <h3 class="menu-heading"><a href="#">CVOEO</a></h3>
-                                        <ul class="menu-nav">
-                                            <li><a href="#">Mission</a></li>
-                                            <li><a href="#">Impact</a></li>
-                                            <li><a href="#">Contact Us</a></li>
+                                <div class="group">
+                                    <div class="menu-navigation">
+                                        <ul class="menu-navigation-items">
+                                            <li>
+                                                <button
+                                                    class="menu-navigation-link menu-navigation-link--open"
+                                                    data-pair="4"
+                                                    data-id="0"
+                                                >
+                                                    <span class="icon">
+                                                        <i class="fad fa-network-wired"></i>
+                                                    </span>
+                                                    <span>Work That Matters</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="menu-navigation-link" data-pair="4" data-id="1">
+                                                    <span class="icon">
+                                                        <i class="fad fa-hand-paper"></i>
+                                                    </span>
+                                                    <span>What We Offer</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="menu-navigation-link" data-pair="4" data-id="2">
+                                                    <span class="icon">
+                                                        <i class="fad fa-briefcase"></i>
+                                                    </span>
+                                                    <span>Current Openings</span>
+                                                </button>
+                                            </li>
                                         </ul>
                                     </div>
-                                    <div class="menu-section">
-                                        <div class="menu-icon">
-                                            <i class="fad fa-home-heart"></i>
+                                    <div class="menu-navigation-panels">
+                                        <div
+                                            class="menu-navigation-panel menu-navigation-panel--open"
+                                            data-pair="4"
+                                            data-id="0"
+                                        >
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Work That Matters</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <h3 class="menu-heading"><a href="#">Who We Are</a></h3>
-                                        <ul class="menu-nav">
-                                            <li><a href="#">Admin / Leadership</a></li>
-                                            <li><a href="#">Programs</a></li>
-                                            <li><a href="#">Office of Racial Equality</a></li>
-                                            <li><a href="#">Board</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="menu-section">
-                                        <div class="menu-icon">
-                                            <i class="fad fa-newspaper"></i>
+                                        <div class="menu-navigation-panel" data-pair="4" data-id="1">
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>What We Offer</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <h3 class="menu-heading"><a href="#">Newsroom</a></h3>
-                                        <ul class="menu-nav">
-                                            <li><a href="#">Blog</a></li>
-                                            <li><a href="#">In the News</a></li>
-                                            <li><a href="#">What We're Following</a></li>
-                                        </ul>
+                                        <div class="menu-navigation-panel" data-pair="4" data-id="2">
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Current Openings</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <button class="menu-closer" title="Close Menu">
-                                <i class="far fa-chevron-up"></i>
-                            </button>
                         </div>
                         <div class="menu" aria-hidden="true" aria-expanded="false" tabindex="-1" data-pair="5">
                             <div class="container">
-                                <div class="menu-head">
-                                    <h2>Careers</h2>
-                                </div>
-                                <div class="group" data-count="2">
-                                    <div class="menu-section">
-                                        <div class="menu-icon">
-                                            <i class="fad fa-network-wired"></i>
-                                        </div>
-                                        <h3 class="menu-heading"><a href="#">Work that Matters</a></h3>
-                                        <ul class="menu-nav">
-                                            <li><a href="#">What We Offer</a></li>
-                                            <li><a href="#">Current Openings</a></li>
-                                            <li><a href="#">DEI</a></li>
-                                            <li><a href="#">How To Apply</a></li>
+                                <div class="group">
+                                    <div class="menu-navigation">
+                                        <ul class="menu-navigation-items">
+                                            <li>
+                                                <button
+                                                    class="menu-navigation-link menu-navigation-link--open"
+                                                    data-pair="5"
+                                                    data-id="0"
+                                                >
+                                                    <span class="icon">
+                                                        <i class="fad fa-usd-circle"></i>
+                                                    </span>
+                                                    <span>Donate</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="menu-navigation-link" data-pair="5" data-id="1">
+                                                    <span class="icon">
+                                                        <i class="fad fa-calendar-alt"></i>
+                                                    </span>
+                                                    <span>Events</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="menu-navigation-link" data-pair="5" data-id="2">
+                                                    <span class="icon">
+                                                        <i class="fad fa-hands-helping"></i>
+                                                    </span>
+                                                    <span>Volunteer</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button class="menu-navigation-link" data-pair="5" data-id="3">
+                                                    <span class="icon">
+                                                        <i class="fad fa-bullhorn"></i>
+                                                    </span>
+                                                    <span>Advocate</span>
+                                                </button>
+                                            </li>
                                         </ul>
+                                    </div>
+                                    <div class="menu-navigation-panels">
+                                        <div
+                                            class="menu-navigation-panel menu-navigation-panel--open"
+                                            data-pair="5"
+                                            data-id="0"
+                                        >
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Donate</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu-navigation-panel" data-pair="5" data-id="1">
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Events</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu-navigation-panel" data-pair="5" data-id="2">
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Volunteer</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Link</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu-navigation-panel" data-pair="5" data-id="3">
+                                            <div class="menu-navigation-panel-label">
+                                                <h2>Advocate</h2>
+                                                <div class="arrow">
+                                                    <a href="#">
+                                                        <i class="far fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Food Security</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Housing Justice</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Racial Equity</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <button class="menu-closer" title="Close Menu">
-                                <i class="far fa-chevron-up"></i>
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -403,6 +952,62 @@
             <section class="impression">
                 <div class="container">
                     <div class="group">
+                        <div class="details">
+                            <div class="text">
+                                <a href="https://vermontelectric.coop/annual-meeting" class="news-snippet">
+                                    <span class="badge">Update</span>
+                                    2021 Annual Report <span>·</span>
+                                    Read
+                                </a>
+                                <h1>BLACK LIVES MATTER</h1>
+                                <div class="description">
+                                    <p>
+                                        We, the Board of CVOEO, denounce racism and demand change: in our own lives, in
+                                        our communities, in our state, and in our country.
+                                    </p>
+                                </div>
+                                <div class="buttons">
+                                    <a class="button" href="#"
+                                        ><span>Read statement</span><i class="fal fa-arrow-right"></i
+                                    ></a>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <a href="https://vermontelectric.coop/annual-meeting" class="news-snippet">
+                                    <span class="badge">Update</span>
+                                    2021 Annual Report <span>·</span>
+                                    Read
+                                </a>
+                                <h1>Employment</h1>
+                                <div class="description">
+                                    <p>
+                                        “I enjoy working for an agency that helps people succeed, that provides the
+                                        services people need to both survive and thrive.” Director, Chittenden Community
+                                        Action
+                                    </p>
+                                </div>
+                                <div class="buttons">
+                                    <a class="button" href="#"
+                                        ><span>We've got jobs!</span><i class="fal fa-arrow-right"></i
+                                    ></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="images">
+                            <div class="image">
+                                <img src="images/impression/diversity-2.jpg" alt="Diversity" />
+                            </div>
+                            <div class="image">
+                                <img src="images/impression/imp-1.jpg" alt="Diversity" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="introduction">
+                <div class="container">
+                    <div class="details">
                         <div class="text">
                             <p class="eyebrow">Economic <strong>Opportunity</strong></p>
                             <h1>
@@ -412,7 +1017,7 @@
                                     ><span class="p"
                                         ><img src="images/paint-smear-2.svg" alt="Paint Smear Decoration" /></span
                                 ></b>
-                                <br />& build
+                                & build
                                 <b
                                     ><span>futures</span
                                     ><span class="p"
@@ -425,22 +1030,6 @@
                                     people to achieve economic independence.
                                 </p>
                             </div>
-                            <div class="buttons">
-                                <a class="button" href="#"
-                                    ><span>More about us</span><i class="fal fa-arrow-right"></i
-                                ></a>
-                            </div>
-                        </div>
-                        <div class="images">
-                            <div class="image">
-                                <img src="images/impression/imp-1.jpg" alt="Diversity" />
-                            </div>
-                            <div class="image">
-                                <img src="images/impression/imp-2.jpg" alt="Diversity" />
-                            </div>
-                            <div class="image">
-                                <img src="images/impression/imp-3.jpg" alt="Diversity" />
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -450,6 +1039,9 @@
                 <div class="container">
                     <div class="section-heading">
                         <h2>Our Impact</h2>
+                    </div>
+                    <div class="image">
+                        <img src="images/impact.jpg" alt="Person" />
                     </div>
                     <div class="group">
                         <div class="statistics-item">
@@ -566,7 +1158,7 @@
                             <div class="upcoming-group">
                                 <div class="upcoming-subitem">
                                     <a href="#">
-                                        <p class="category">Personal Finance</p>
+                                        <p class="category" data-type="1">Personal Finance</p>
                                         <h3>Class #1</h3>
                                         <p class="dates">July 1, 10 - 2:00 pm</p>
                                         <p class="location">Location TBD</p>
@@ -574,7 +1166,7 @@
                                 </div>
                                 <div class="upcoming-subitem">
                                     <a href="#">
-                                        <p class="category">Micro Business</p>
+                                        <p class="category" data-type="2">Micro Business</p>
                                         <h3>Workshop #2</h3>
                                         <p class="dates">July 2, 10 - 2:00 pm</p>
                                         <p class="location">Location TBD</p>
@@ -582,7 +1174,7 @@
                                 </div>
                                 <div class="upcoming-subitem">
                                     <a href="#">
-                                        <p class="category">Renters</p>
+                                        <p class="category" data-type="3">Renters</p>
                                         <h3>Class #3</h3>
                                         <p class="dates">July 3, 10 - 2:00 pm</p>
                                         <p class="location">Location TBD</p>
@@ -598,7 +1190,7 @@
                             <div class="upcoming-group">
                                 <div class="upcoming-subitem">
                                     <a href="#">
-                                        <p class="category">Event</p>
+                                        <p class="category" data-type="0">Event</p>
                                         <h3>Annual Garden Day</h3>
                                         <p class="dates">July 1, 10 - 2:00 pm</p>
                                         <p class="location">Location TBD</p>
@@ -606,13 +1198,13 @@
                                 </div>
                                 <div class="upcoming-subitem">
                                     <a href="#">
-                                        <p class="category">Event</p>
+                                        <p class="category" data-type="0">Event</p>
                                         <h3>Event #2</h3>
                                         <p class="dates">July 2, 10 - 2:00 pm</p>
                                         <p class="location">Location TBD</p>
                                     </a>
                                 </div>
-                                <div class="upcoming-subitem">
+                                <div class="upcoming-subitem" data-type="0">
                                     <a href="#">
                                         <p class="category">Event</p>
                                         <h3>Event #3</h3>
@@ -645,7 +1237,7 @@
                             </div>
                         </div>
                         <div class="buttons">
-                            <a href="blog/" class="button button-size-medium button-primary"> Make a Donation </a>
+                            <a href="blog/" class="button button-size-medium button-tertiary"> Make a Donation </a>
                         </div>
                     </div>
                 </div>
@@ -708,6 +1300,17 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <section class="instagram">
+                <div class="container">
+                    <div class="icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h2 class="heading">Follow us on Instagram</h2>
+                    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                    <div class="elfsight-app-bc07f850-6f18-4d3f-9f00-b48712b5ae03"></div>
                 </div>
             </section>
         </main>

@@ -52,7 +52,7 @@
     }
 
     button {
-        @include fs(20px);
+        @include fs(21px);
         display: block;
         color: $color-0;
         text-decoration: none;
@@ -63,8 +63,9 @@
         border: none;
         outline: none;
         font-family: inherit;
+        font-weight: 500;
         border-bottom: 2px solid transparent;
-        padding: 0.25em 0;
+        padding: 0;
         cursor: pointer;
 
         &:hover {
@@ -132,70 +133,6 @@
             @include fs(12px);
             cursor: pointer;
             margin: 0 0 0 6px;
-        }
-    }
-
-    .utility-nav {
-        justify-content: flex-end;
-        margin-bottom: 1.5em;
-
-        li {
-            margin: 0 0 0 0.5em;
-
-            a {
-                display: inline-flex;
-                opacity: 0.85;
-                @include fs(14px);
-                padding: 0.35em 0.75em;
-                border-radius: 0.5em;
-
-                &.button {
-                    height: 32px;
-
-                    &:hover,
-                    &:focus {
-                        background: darken($color-2, 5%);
-                    }
-                }
-
-                &:hover,
-                &:focus {
-                    color: inherit;
-                    background: #f6f9fc;
-                    //background-color: rgba($color-6, 0.1);
-                }
-            }
-
-            i {
-                @include fs(14px);
-                margin: 0;
-                margin-right: 0.25em;
-            }
-        }
-
-        select {
-            border: none;
-            outline: none;
-            padding: 0.35em 0.75em;
-            font-family: inherit;
-            font-size: 14px;
-            border-radius: 0.5em;
-            opacity: 0.85;
-            cursor: pointer;
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            line-height: inherit;
-
-            &::-ms-expand {
-                display: none;
-            }
-
-            &:hover,
-            &:focus {
-                background: #f6f9fc;
-                opacity: 1;
-            }
         }
     }
 
