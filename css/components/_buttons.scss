@@ -108,6 +108,15 @@ $button-background: $color-1;
         }
     }
 
+    &-tertiary {
+        background: $color-3;
+
+        &:hover,
+        &:focus {
+            background: darken($color-3, 5%);
+        }
+    }
+
     &[disabled] {
         background: $color-grey-1;
         color: $color-0;

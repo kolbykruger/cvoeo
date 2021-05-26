@@ -94,4 +94,39 @@ document.addEventListener('DOMContentLoaded', function () {
         menuOverlay.classList.remove('menu-open')
         elem.classList.remove('menu-open')
     }
+
+    const menuTabs = document.querySelectorAll('.menu-navigation-link')
+
+    if (menuTabs) {
+        for (let i = 0; i < menuTabs.length; i++) {
+            const tab = menuTabs[i]
+
+            tab.addEventListener('click', function () {
+                const tabPair = tab.dataset.pair
+                const tabId = tab.dataset.id
+                const menuTabsByPair = document.querySelectorAll('.menu-navigation-link[data-pair="' + tabPair + '"]')
+                const menuPanelsByPair = document.querySelectorAll(
+                    '.menu-navigation-panel[data-pair="' + tabPair + '"]'
+                )
+
+                for (let i = 0; i < menuTabsByPair.length; i++) {
+                    const t = menuTabsByPair[i]
+                    t.classList.remove('menu-navigation-link--open')
+                }
+
+                for (let i = 0; i < menuPanelsByPair.length; i++) {
+                    const panel = menuPanelsByPair[i]
+                    panel.classList.remove('menu-navigation-panel--open')
+                    panel.setAttribute('tabindex', '-1')
+                }
+
+                tab.classList.add('menu-navigation-link--open')
+                const activePanel = document.querySelector(
+                    '.menu-navigation-panel[data-pair="' + tabPair + '"][data-id="' + tabId + '"]'
+                )
+                console.log(tabPair, tabId)
+                activePanel.classList.add('menu-navigation-panel--open')
+            })
+        }
+    }
 })

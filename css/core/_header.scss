@@ -1,11 +1,12 @@
 .header {
-    border-top: 0.75em solid $color-base;
+    background: $color-grey-1;
 
     .container {
         position: relative;
         max-width: $container-width;
         width: 100%;
         padding: 2em 1em;
+        padding-top: 3em;
     }
 
     .group {
@@ -23,6 +24,101 @@
 
         img {
             width: 100%;
+        }
+    }
+
+    .utility-nav {
+        background: $color-base;
+
+        .container {
+            padding: 0.5em;
+        }
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin: 0 0 0 0.75em;
+
+            a {
+                display: inline-flex;
+                opacity: 0.85;
+                @include fs(14px);
+                padding: 0.35em 0.75em;
+                border-radius: 0.5em;
+                color: #fff;
+                text-decoration: none;
+
+                .icon {
+                    margin-right: 0.35em;
+                }
+
+                &.button {
+                    height: 32px;
+
+                    &:hover,
+                    &:focus {
+                        background: darken($color-3, 5%);
+                    }
+                }
+
+                &:hover,
+                &:focus {
+                    opacity: 1;
+                    //background-color: rgba($color-6, 0.1);
+                }
+            }
+
+            i {
+                @include fs(14px);
+                margin: 0;
+                margin-right: 0.25em;
+            }
+        }
+
+        .language {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &::before {
+                content: '\f0ac';
+                font-family: 'Font Awesome 5 Pro';
+                font-size: 0.875rem;
+                opacity: 0.85;
+                color: #fff;
+            }
+
+            select {
+                background: none;
+                border: none;
+                color: #fff;
+                outline: none;
+                padding: 0.35em 0.75em;
+                font-family: inherit;
+                font-size: 14px;
+                border-radius: 0.5em;
+                opacity: 0.85;
+                cursor: pointer;
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                line-height: inherit;
+
+                &::-ms-expand {
+                    display: none;
+                }
+
+                &:hover,
+                &:focus {
+                    opacity: 1;
+                }
+            }
         }
     }
 
