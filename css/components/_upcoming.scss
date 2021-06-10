@@ -4,20 +4,14 @@
     .container {
     }
 
-    .group {
-        h2 {
-            text-align: center;
-            margin-bottom: 0.5em;
-        }
+    h2 {
+        text-align: center;
+        margin-bottom: 0.5em;
     }
 
     &-item {
-        width: calc(50% - 2em);
-        margin: 1em;
-    }
-
-    &-subitem {
         margin: 1em auto;
+        width: calc(50% - 2em);
 
         a {
             display: block;

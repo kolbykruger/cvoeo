@@ -69,12 +69,12 @@
         cursor: pointer;
 
         &:hover {
-            border-color: $color-1;
+            border-color: $color-3;
         }
 
         &.menu-open {
-            border-color: $color-1;
-            color: $color-1;
+            border-color: $color-3;
+            color: $color-3;
 
             i:not(.fa-search) {
                 transform: rotateX(180deg);
@@ -92,7 +92,7 @@
 
         &:hover,
         &:focus {
-            color: $color-1;
+            color: $color-3;
         }
     }
 

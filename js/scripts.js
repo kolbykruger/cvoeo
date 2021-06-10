@@ -133,6 +133,19 @@ $('.impression .group .details').flickity({
     draggable: false,
 })
 
+$('.get-help .group').flickity({
+    cellSelector: '.get-help-item',
+    wrapAround: false,
+    adaptiveHeight: false,
+    cellAlign: 'left',
+    freeScroll: true,
+    prevNextButtons: true,
+    pageDots: false,
+    imagesLoaded: true,
+    selectedAttraction: 0.01,
+    friction: 0.2,
+})
+
 //Universal Tables
 $('table').wrap("<div class='universal-table'></div>")
 

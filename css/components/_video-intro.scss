@@ -4,8 +4,9 @@
     //background: linear-gradient(to bottom, $color-grey-1, transparent);
 
     .container {
-        padding: 10vh 10vh;
+        padding: 5vh 5vw;
         max-width: 100%;
+        max-width: $container-width;
 
         @media (max-width: 968px) {
             padding: 2em;

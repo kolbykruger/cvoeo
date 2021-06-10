@@ -32,7 +32,7 @@ body {
 
     body.navigation-open & {
         transform: translate(0, 0);
-        backdrop-filter: blur(6px);
+        //backdrop-filter: &-(6px);
 
         .container {
             animation: menu-open-container-opacity 0.3s cubic-bezier(0.53, 0.21, 0, 1) forwards 0.3s;
@@ -188,7 +188,26 @@ body {
                     margin-bottom: 0.5em;
 
                     h2 {
+                        display: flex;
+                        align-items: center;
                         width: auto;
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            text-decoration: none;
+                            color: inherit;
+                            transition: 150ms ease;
+
+                            &:hover,
+                            &:focus {
+                                text-decoration: underline;
+                            }
+                        }
+
+                        .icon {
+                            margin-right: 0.5em;
+                        }
                     }
 
                     .arrow {
@@ -202,6 +221,13 @@ body {
                             background: $color-2;
                             border-radius: 50%;
                             color: #fff;
+
+                            &:hover,
+                            &:focus {
+                                text-decoration: none;
+                                background: $color-1;
+                                color: #fff;
+                            }
                         }
                     }
                 }
@@ -231,20 +257,30 @@ body {
         }
     }
 
+    .menu-lower-actions {
+        text-align: center;
+        margin-top: 5em;
+    }
+
     .menu-closer {
         appearance: none;
         -webkit-apearance: none;
         -moz-appearance: none;
-        position: absolute;
-        bottom: 1em;
-        left: 0;
-        right: 0;
         margin: 0 auto;
         border: none;
         background: none;
-        font-size: 1rem;
-        opacity: 0.65;
+        font-size: 0.875rem;
         cursor: pointer;
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-family: inherit;
+        letter-spacing: 0.125em;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
     }
 
     .container {
